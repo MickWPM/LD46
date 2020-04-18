@@ -12,7 +12,7 @@ public class FoodNode : MonoBehaviour, IClickable
         float qty = Time.deltaTime * harvestRate * workRate;
         remaining -= qty;
 
-        EventsManager.instance.FireAddFoodEvent(qty);
+        EventsManager.instance.FireAddFoodByNodeEvent(qty);
 
         if (remaining <= 0)
         {

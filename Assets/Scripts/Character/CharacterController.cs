@@ -43,7 +43,7 @@ public class CharacterController : MonoBehaviour
         Vector3 moveTargetVector = currentTarget.position - transform.position;
         if (Vector3.SqrMagnitude(moveTargetVector) > actionRange)
         {
-            transform.Translate(moveTargetVector.normalized * Time.deltaTime * moveSpeed);
+            transform.Translate(moveTargetVector.normalized * Time.deltaTime * moveSpeed * stats.MovementSpeedScaler);
             return false;
         }
 

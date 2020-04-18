@@ -17,6 +17,12 @@ public class EventsManager : MonoBehaviour
         MouseHoverObjectUpdatedEvent?.Invoke(hoverObjectCategory);
     }
 
+    public event System.Action PatThePetEvent;
+    public void FirePatThePetEvent()
+    {
+        PatThePetEvent?.Invoke();
+    }
+
     public event System.Action<float> CharacterDeathEvent;
     internal void FireDeathEvent(float currentAge)
     {
@@ -31,29 +37,29 @@ public class EventsManager : MonoBehaviour
     }
 
 
-    public event System.Action<float> WorkRateChangedEvent;
-    internal void FireChangeWorkRateEvent(float amount)
+    public event System.Action<float> WorkRateChangedByTrainNodeEvent;
+    internal void FireChangeWorkRateByTrainNodeEvent(float amount)
     {
-        WorkRateChangedEvent?.Invoke(amount);
+        WorkRateChangedByTrainNodeEvent?.Invoke(amount);
     }
 
-    public event System.Action<float> ResourcesChangedEvent;
-    public void FireChangeResourcesEvent(float amount)
+    public event System.Action<float> ResourcesChangedByNodeEvent;
+    public void FireChangeResourcesByNodeEvent(float amount)
     {
-        ResourcesChangedEvent?.Invoke(amount);
+        ResourcesChangedByNodeEvent?.Invoke(amount);
     }
 
-    public event System.Action<float> FoodAddedEvent;
-    internal void FireAddFoodEvent(float amount)
+    public event System.Action<float> FoodAddedByNodeEvent;
+    internal void FireAddFoodByNodeEvent(float amount)
     {
-        FoodAddedEvent?.Invoke(amount);
+        FoodAddedByNodeEvent?.Invoke(amount);
     }
 
 
-    public event System.Action<float> HappinessAddedEvent;
-    public void FireAddHappinessEvent(float amount)
+    public event System.Action<float> HappinessAddedByNodeEvent;
+    public void FireAddHappinessByNodeEvent(float amount)
     {
-        HappinessAddedEvent?.Invoke(amount);
+        HappinessAddedByNodeEvent?.Invoke(amount);
     }
 
     public event System.Action HappinessBelowZeroEvent;

@@ -12,7 +12,7 @@ public class ResourceNode : MonoBehaviour, IClickable
         float qty = Time.deltaTime * workRate * harvestRate;
         remaining -= qty;
 
-        EventsManager.instance.FireChangeResourcesEvent(qty);
+        EventsManager.instance.FireChangeResourcesByNodeEvent(qty);
 
         if (remaining <= 0)
         {

@@ -12,7 +12,7 @@ public class PlayNode : MonoBehaviour, IClickable
         float qty = Time.deltaTime * harvestRate * workRate;
         remaining -= qty;
 
-        EventsManager.instance.FireAddHappinessEvent(qty);
+        EventsManager.instance.FireAddHappinessByNodeEvent(qty);
 
         if (remaining <= 0)
         {

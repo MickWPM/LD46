@@ -12,7 +12,7 @@ public class TrainNode : MonoBehaviour, IClickable
         float qty = Time.deltaTime * workRate * harvestRate;
         remaining -= qty;
 
-        EventsManager.instance.FireChangeWorkRateEvent(qty);
+        EventsManager.instance.FireChangeWorkRateByTrainNodeEvent(qty);
 
         if (remaining <= 0)
         {

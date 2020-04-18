@@ -23,23 +23,23 @@ public class Brainstorming : MonoBehaviour
      *   
      *   
      *   Game loop:
-     *   Start as a baby
-     *   Start with one play node
-     *   When hunger gets below ~80 or removes play node, spawn in a food node
-     *   After a bit of time, spawn in a resource node
-     *   When the player interacts with the resource node, show the UI
-     *   After the first resource node is depleted, add the TRAIN node option
+     *   Start as a baby ("Choose? Hatch your baby!)
+     *   Start with one play node ("Babies need playtime, go play!")
+     *   When hunger gets below ~80 or removes play node, spawn in a food node ("Life needs food as well as playtime")
+     *   After a bit of time, spawn in a resource node ("Welcome to the world little sprout. Hard truth is you need to work for what you get...")
+     *   When the player interacts with the resource node, show the UI ("Interact with your XXXX by providing it stimulus")
+     *   After the first resource node is depleted, add the TRAIN node option ("Work is life though so train up to work better....")
      *   Then game on.
      * 
      * 
      * 
      *  To implement:
-     *  Add node effects (hunger/happiness changes - store as a per second value in the node, call the event)
-     *  Change movement speeds based on age (other stats?)
-     *  Pat (Major happiness increase as baby, happiness decrease as an adult, minor happiness increase in old age)
+     * Lifespan drain for low happiness/food:
+     * *  Slow lifespan drain below 50% happiness/food
+     * *  Big Lifespan hits below zero happiness/food
      *  
      *  Possible:
-     *  Scale work efficiency with age
+     *  Scale work efficiency and other stats with age
      *  Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??
      * 
      */

@@ -21,7 +21,7 @@ public class MouseManager : MonoBehaviour
         EventsManager.instance.MouseHoverObjectUpdatedEvent += UpdateMouseCursor;
     }
 
-    public Texture2D resourceCursor, foodCursor, playCursor, trainCursor, defaultCursor;
+    public Texture2D resourceCursor, foodCursor, playCursor, trainCursor, defaultCursor, patThePetCursor;
     void UpdateMouseCursor(MouseHoverCategories category)
     {
         switch (category)
@@ -38,9 +38,11 @@ public class MouseManager : MonoBehaviour
             case MouseHoverCategories.TRAIN:
                 Cursor.SetCursor(trainCursor, Vector2.zero, CursorMode.ForceSoftware);
                 break;
+            case MouseHoverCategories.ME:
+                Cursor.SetCursor(patThePetCursor, Vector2.zero, CursorMode.ForceSoftware);
+                break;
             case MouseHoverCategories.NULL:
             case MouseHoverCategories.GROUND:
-            case MouseHoverCategories.ME:
             default:
                 Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.ForceSoftware);
                 break;
@@ -53,8 +55,22 @@ public class MouseManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (hoverObject != null)
-                timTam.ClickedObject(hoverObject);
+            switch (currentHover)
+            {
+                case MouseHoverCategories.RESOURCE:
+                case MouseHoverCategories.FOOD:
+                case MouseHoverCategories.PLAY:
+                case MouseHoverCategories.TRAIN:
+                    timTam.ClickedObject(hoverObject);
+                    break;
+                case MouseHoverCategories.ME:
+                    EventsManager.instance.FirePatThePetEvent();
+                    break;
+                case MouseHoverCategories.NULL:
+                case MouseHoverCategories.GROUND:
+                default:
+                    break;
+            }                
         }
     }
 
@@ -76,9 +92,16 @@ public class MouseManager : MonoBehaviour
                 newHoverCat = clickable.GetClickableCategory();
             } else
             {
-                //Only null option initially is ground.
-                //This may need to be udpated later
-                newHoverCat = MouseHoverCategories.GROUND;
+                CharacterStats stats = hoverObject.GetComponent<CharacterStats>();
+                if (stats != null)
+                {
+                    newHoverCat = MouseHoverCategories.ME;
+                } else
+                {
+                    //Only other option initially is ground.
+                    //This may need to be udpated later
+                    newHoverCat = MouseHoverCategories.GROUND;
+                }
             }
         }
 
