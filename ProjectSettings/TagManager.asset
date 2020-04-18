@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bottom
+    uniqueID: 701717373
+    locked: 0
+  - name: TerrainDecorations
+    uniqueID: 3102124819
+    locked: 0
+  - name: Character
+    uniqueID: 2267781201
+    locked: 0
