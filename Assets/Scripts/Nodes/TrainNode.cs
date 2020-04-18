@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceNode : MonoBehaviour, IClickable
+public class TrainNode : MonoBehaviour, IClickable
 {
-    public float remaining = 100;
-    public float harvestRate = 1f;
+    public float remaining = 0.1f;
+    public float harvestRate = 0.01f;
 
     public bool TryAction(float workRate)
     {
         float qty = Time.deltaTime * workRate * harvestRate;
         remaining -= qty;
 
-        EventsManager.instance.FireChangeResourcesEvent(qty);
+        EventsManager.instance.FireChangeWorkRateEvent(qty);
 
         if (remaining <= 0)
         {
-            EventsManager.instance.FireResourceNodeExhaustedEvent(transform.position);
+            EventsManager.instance.FireWorkRateNodeExhaustedEvent(transform.position);
             Destroy(gameObject);
         }
 
@@ -25,6 +25,6 @@ public class ResourceNode : MonoBehaviour, IClickable
 
     public MouseHoverCategories GetClickableCategory()
     {
-        return MouseHoverCategories.RESOURCE;
+        return MouseHoverCategories.TRAIN;
     }
 }

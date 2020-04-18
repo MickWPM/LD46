@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public CharacterStats characterStats;
+    CharacterStats characterStats;
+
 
     private void Awake()
     {
@@ -15,7 +16,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        
+        EventsManager.instance.CharacterDeathEvent += (float age) => 
+        {
+            characterStats.gameObject.SetActive(false);
+            Debug.Log($"Died after {age} seconds");
+        };
     }
 
 

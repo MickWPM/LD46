@@ -7,6 +7,46 @@ public class MouseManager : MonoBehaviour
     [SerializeField]
     CharacterController timTam;
 
+    public MouseHoverCategories currentHover;
+
+    private void Awake()
+    {
+        currentHover = MouseHoverCategories.NULL;
+        Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.ForceSoftware);
+
+    }
+
+    private void Start()
+    {
+        EventsManager.instance.MouseHoverObjectUpdatedEvent += UpdateMouseCursor;
+    }
+
+    public Texture2D resourceCursor, foodCursor, playCursor, trainCursor, defaultCursor;
+    void UpdateMouseCursor(MouseHoverCategories category)
+    {
+        switch (category)
+        {
+            case MouseHoverCategories.RESOURCE:
+                Cursor.SetCursor(resourceCursor, Vector2.zero, CursorMode.ForceSoftware);
+                break;
+            case MouseHoverCategories.FOOD:
+                Cursor.SetCursor(foodCursor, Vector2.zero, CursorMode.ForceSoftware);
+                break;
+            case MouseHoverCategories.PLAY:
+                Cursor.SetCursor(playCursor, Vector2.zero, CursorMode.ForceSoftware);
+                break;
+            case MouseHoverCategories.TRAIN:
+                Cursor.SetCursor(trainCursor, Vector2.zero, CursorMode.ForceSoftware);
+                break;
+            case MouseHoverCategories.NULL:
+            case MouseHoverCategories.GROUND:
+            case MouseHoverCategories.ME:
+            default:
+                Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.ForceSoftware);
+                break;
+        }
+    }
+
     void Update()
     {
         UpdateMouseHover();
@@ -26,6 +66,38 @@ public class MouseManager : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
         hoverObject = hit ? hit.collider.gameObject : null;
+
+        MouseHoverCategories newHoverCat = MouseHoverCategories.NULL;
+        if(hoverObject != null)
+        {
+            IClickable clickable = hoverObject.GetComponent<IClickable>();
+            if (clickable != null)
+            {
+                newHoverCat = clickable.GetClickableCategory();
+            } else
+            {
+                //Only null option initially is ground.
+                //This may need to be udpated later
+                newHoverCat = MouseHoverCategories.GROUND;
+            }
+        }
+
+        if (currentHover != newHoverCat)
+        {
+            currentHover = newHoverCat;
+            EventsManager.instance.FireMouseHoverObjectUpdatedEvent(currentHover);
+        }
     }
 
+}
+
+public enum MouseHoverCategories
+{
+    NULL,
+    GROUND,
+    ME,
+    RESOURCE,
+    FOOD,
+    PLAY,
+    TRAIN
 }

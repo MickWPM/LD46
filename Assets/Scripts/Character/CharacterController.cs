@@ -29,7 +29,11 @@ public class CharacterController : MonoBehaviour
         bool arrived = MoveToTarget();
         if (!arrived) return;
 
-        bool actionSuccess = currentInteractionTarget.TryAction(stats.WorkRate());
+        bool canKeepUsingNode = currentInteractionTarget.TryAction(stats.WorkRate());
+        if (canKeepUsingNode == false)
+        {
+            CancelCurrentAction();
+        }
     }
 
     bool MoveToTarget()
@@ -61,8 +65,13 @@ public class CharacterController : MonoBehaviour
             currentInteractionTarget = clickable;
         } else
         {
-            currentTarget = null;
-            currentInteractionTarget = null;
+            CancelCurrentAction();
         }
+    }
+
+    public void CancelCurrentAction()
+    {
+        currentTarget = null;
+        currentInteractionTarget = null;
     }
 }

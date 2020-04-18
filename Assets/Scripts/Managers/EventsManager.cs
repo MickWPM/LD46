@@ -11,6 +11,31 @@ public class EventsManager : MonoBehaviour
         instance = this;
     }
 
+    public event System.Action<MouseHoverCategories> MouseHoverObjectUpdatedEvent;
+    public void FireMouseHoverObjectUpdatedEvent(MouseHoverCategories hoverObjectCategory)
+    {
+        MouseHoverObjectUpdatedEvent?.Invoke(hoverObjectCategory);
+    }
+
+    public event System.Action<float> CharacterDeathEvent;
+    internal void FireDeathEvent(float currentAge)
+    {
+        CharacterDeathEvent?.Invoke(currentAge);
+    }
+
+
+    public event System.Action<CharacterLifeStage> CharacterLifeStageChangedEvent;
+    internal void FireChangedLifeStageEvent(CharacterLifeStage currentLifeStage)
+    {
+        CharacterLifeStageChangedEvent?.Invoke(currentLifeStage);
+    }
+
+
+    public event System.Action<float> WorkRateChangedEvent;
+    internal void FireChangeWorkRateEvent(float amount)
+    {
+        WorkRateChangedEvent?.Invoke(amount);
+    }
 
     public event System.Action<float> ResourcesChangedEvent;
     public void FireChangeResourcesEvent(float amount)
@@ -51,6 +76,7 @@ public class EventsManager : MonoBehaviour
     }
 
     public event System.Action<Vector3> PlayNodeExhaustedEvent;
+
     internal void FirePlayNodeExhaustedEvent(Vector3 position)
     {
         PlayNodeExhaustedEvent?.Invoke(position);
@@ -61,6 +87,13 @@ public class EventsManager : MonoBehaviour
     internal void FireFoodNodeExhaustedEvent(Vector3 position)
     {
         FoodNodeExhaustedEvent?.Invoke(position);
+    }
+
+
+    public event System.Action<Vector3> WorkRateNodeExhaustedEvent;
+    internal void FireWorkRateNodeExhaustedEvent(Vector3 position)
+    {
+        WorkRateNodeExhaustedEvent?.Invoke(position);
     }
 
 }

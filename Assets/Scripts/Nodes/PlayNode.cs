@@ -23,4 +23,9 @@ public class PlayNode : MonoBehaviour, IClickable
         return remaining > 0;
     }
 
+    public MouseHoverCategories GetClickableCategory()
+    {
+        return MouseHoverCategories.PLAY;
+    }
+
 }
