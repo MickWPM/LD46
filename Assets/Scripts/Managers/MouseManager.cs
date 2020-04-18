@@ -13,7 +13,8 @@ public class MouseManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            timTam.ClickedObject(hoverObject);
+            if (hoverObject != null)
+                timTam.ClickedObject(hoverObject);
         }
     }
 

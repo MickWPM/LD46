@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IClickable
 {
-    bool TryAction();
+    bool TryAction(float workRate);
 }
