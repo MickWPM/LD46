@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class PlayerEgg : MonoBehaviour
 {
+    public SpriteRenderer sr;
+    public Sprite[] crackSprites;
     private void Start()
     {
         EventsManager.instance.CharacterEggClickedEvent += EggClicked;
     }
 
-    public int cracksRemaining = 3;
+    public int cracks = 0;
     void EggClicked()
     {
-        --cracksRemaining;
+        ++cracks;
         Debug.Log("Crakcing sound");
-        if (cracksRemaining == 0)
+        if (cracks > crackSprites.Length)
+        {
             Hatch();
+        } else
+        {
+            sr.sprite = crackSprites[cracks-1];
+        }
     }
 
     void Hatch()

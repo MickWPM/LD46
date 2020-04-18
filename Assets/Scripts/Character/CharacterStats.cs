@@ -12,9 +12,26 @@ public enum CharacterLifeStage
 }
 
 
+public enum CharacterHungerState
+{
+    FULL,
+    NORMAL,
+    STARVING
+}
+
+public enum CharacterHappinessState
+{
+    HAPPY,
+    NORMAL,
+    SAD
+}
+
+
 public class CharacterStats : MonoBehaviour
 {
     [SerializeField] CharacterLifeStage currentLifeStage = CharacterLifeStage.BABY;
+    [SerializeField] CharacterHappinessState currentHappinessState = CharacterHappinessState.NORMAL;
+    [SerializeField] CharacterHungerState currentHungerState = CharacterHungerState.NORMAL;
     public bool degradeWithTime = false;
     //Do all of these change with age?
     [SerializeField] float lifespan = 300;
@@ -36,6 +53,11 @@ public class CharacterStats : MonoBehaviour
         this.foodEnergy = food;
     }
 
+    internal void CheatResources()
+    {
+        resources = 999999;
+    }
+
     [SerializeField] float resources = 0;
     public float Resources { get => resources; }
 
@@ -44,6 +66,10 @@ public class CharacterStats : MonoBehaviour
 
     private void Start()
     {
+        currentLifeStage = CharacterLifeStage.BABY;
+        currentHappinessState = CharacterHappinessState.NORMAL;
+        currentHungerState = CharacterHungerState.NORMAL;
+
         movementSpeedScaler = speedScaleBaby;
         maxLifespan = lifespan;
         EventsManager.instance.FoodAddedByNodeEvent += FoodNode;
@@ -90,6 +116,43 @@ public class CharacterStats : MonoBehaviour
     }
 
 
+    void UpdateStates()
+    {
+        CharacterHungerState newHungerState = CharacterHungerState.NORMAL;
+        CharacterHappinessState newHappinessState = CharacterHappinessState.NORMAL;
+
+        if (happiness > 90f)
+        {
+            newHappinessState = CharacterHappinessState.HAPPY;
+        }
+        else if (happiness < 10f)
+        {
+            newHappinessState = CharacterHappinessState.SAD;
+        }
+
+        if (newHappinessState != currentHappinessState)
+        {
+            EventsManager.instance.FireChangeHappinessStateEvent(currentHappinessState, newHappinessState);
+            currentHappinessState = newHappinessState;
+        }
+
+
+        if (foodEnergy > 90f)
+        {
+            newHungerState = CharacterHungerState.FULL;
+        }
+        else if (foodEnergy < 10f)
+        {
+            newHungerState = CharacterHungerState.STARVING;
+        }
+
+        if (newHungerState != currentHungerState)
+        {
+            EventsManager.instance.FireChangeHungerStateEvent(currentHungerState, newHungerState);
+            currentHungerState = newHungerState;
+        }
+    }
+
     private void Update()
     {
         if (degradeWithTime)
@@ -99,6 +162,7 @@ public class CharacterStats : MonoBehaviour
             UpdateLifespan();
         }
 
+        UpdateStates();
 
         string s = "DEBUG INFO - STATS:\n";
         s += "\nCurrent age: " + currentAge;
@@ -151,16 +215,19 @@ public class CharacterStats : MonoBehaviour
 
     public float GetHappinessLifespanLossModifier()
     {
-        if (happiness > 0.9f)
-            return 0.9f;
-
-        if (happiness > 0.5f)
-            return 1;
-
-        if (happiness > 0.25f)
-            return 1.25f;
-
-        return 1.5f;
+        switch (currentHappinessState)
+        {
+            case CharacterHappinessState.HAPPY:
+                return 0.9f;
+            case CharacterHappinessState.NORMAL:
+                return 1;
+            case CharacterHappinessState.SAD:
+                return 1.5f;
+            default:
+                Debug.LogError($"Happiness state {currentHappinessState} not handled");
+                break;
+        }
+        return 1;
     }
 
     public float GetHungerLifespanLossModifier()

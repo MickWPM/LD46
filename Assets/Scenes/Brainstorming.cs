@@ -34,24 +34,31 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     *  Player flow (intro stuff etc)
-     *  Sprite change on age and happiness
+     *  *Sprite change on age and happiness
+     *  Play node (beach ball?) 
+     *  Food node (Steak on dish)
+     *  Work node (Computer?)
+     *  Train node (Weights)
+     *  
+     *  Cursors (64x64?)
+     *  UI backing (crumpled paper??)
+     *  Font (Hand writing?)
      * 
-     * ART:
-     *  Cursors
-     *  Train, Food, Play, Work interaction points
-     *  Character, smile, flat and sad, dummy, hair
-     *  UI art
+     * 
+     *  *Build UI mechanics (middle cancel, raidal options) for right click
+     *  Tooltips (nodes, me etc?) **
+     *  Scale work efficiency and other stats with age**
+     *  Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point?
+     * 
+     * Art pass 2 - Drop shadows, texture etc for character
      *  
      *  Possible:
+     *  Egg cracked effect (disappear outwards)
      *  Fountain of youth?!?!
      *  Static bath/bed to wash dirt off/sleep intermittently
      *  Enemy to dodge (requires click to move) - eg just moving over the screen
+     *      Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??
      *  
-     *  Tooltips (nodes, me etc?)
-     *  Scale work efficiency and other stats with age**
-     *  Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??
-     * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point?
      * 
      * 
      * 

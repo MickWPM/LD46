@@ -38,6 +38,19 @@ public class EventsManager : MonoBehaviour
 
 
     #region CharacterEvents
+    
+
+    public event System.Action<CharacterHungerState, CharacterHungerState> ChangeHungerStateEvent;
+    internal void FireChangeHungerStateEvent(CharacterHungerState currentHungerState, CharacterHungerState newHungerState)
+    {
+        ChangeHungerStateEvent?.Invoke(currentHungerState, newHungerState);
+    }
+
+    public event System.Action<CharacterHappinessState, CharacterHappinessState> ChangeHappinessStateEvent;
+    internal void FireChangeHappinessStateEvent(CharacterHappinessState currentHappinessState, CharacterHappinessState newHappinessState)
+    {
+        ChangeHappinessStateEvent?.Invoke(currentHappinessState, newHappinessState);
+    }
 
     public event System.Action CharacterEggClickedEvent;
     internal void FireEggClickedEvent()
@@ -149,7 +162,6 @@ public class EventsManager : MonoBehaviour
     }
 
     public event System.Action<Vector3> PlayNodeExhaustedEvent;
-
     internal void FirePlayNodeExhaustedEvent(Vector3 position)
     {
         PlayNodeExhaustedEvent?.Invoke(position);
