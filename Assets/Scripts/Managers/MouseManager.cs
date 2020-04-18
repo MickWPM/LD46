@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MouseManager : MonoBehaviour
 {
     [SerializeField]
@@ -51,6 +52,11 @@ public class MouseManager : MonoBehaviour
 
     void Update()
     {
+        if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         UpdateMouseHover();
 
         if (Input.GetMouseButtonDown(0))

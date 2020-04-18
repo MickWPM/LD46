@@ -34,9 +34,6 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     * Spawn in node from user button click (subtract from user resources)
-     * (capture button click so it doesnt tell the pet to move)
-     * 
      * 
      * 
      * 
@@ -52,6 +49,7 @@ public class Brainstorming : MonoBehaviour
      *  Tooltips (nodes, me etc?)
      *  Scale work efficiency and other stats with age
      *  Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??
+     * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point
      * 
      * BALANCING:
      * Life loss by hunger/sadness

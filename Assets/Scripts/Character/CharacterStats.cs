@@ -28,7 +28,9 @@ public class CharacterStats : MonoBehaviour
     float speedScaleBaby = 0.3f, speedScaleAdult = 1.0f, speedScaleAged = 0.6f;
     float movementSpeedScaler = 0.3f;
     public float MovementSpeedScaler { get => movementSpeedScaler; private set => movementSpeedScaler = value; }
-    public float resources = 0;
+
+    [SerializeField] float resources = 0;
+    public float Resources { get => resources; }
 
     float currentAge = 0;
     float timeSincePatThePet = 0;
@@ -42,6 +44,13 @@ public class CharacterStats : MonoBehaviour
         EventsManager.instance.ResourcesChangedByNodeEvent += ResourcesNode;
         EventsManager.instance.WorkRateChangedByTrainNodeEvent += TrainNode;
         EventsManager.instance.PatThePetEvent += PatThePet;
+
+        EventsManager.instance.NodeSpawnedEvent += PayForNode;
+    }
+
+    void PayForNode(Nodes node)
+    {
+        AddResources( -1 * GameManager.instance.NodeCost(node) );
     }
 
     float foodRemovedPerWorkSecond = 2, happinessRemovedPerWorkSecond = 2;
@@ -87,7 +96,7 @@ public class CharacterStats : MonoBehaviour
         s += "\nCurrent life stage: " + currentLifeStage;
         s += "\nCurrent Food satisfaction: " + foodEnergy;
         s += "\nCurrent Happiness: " + happiness;
-        s += "\nCurrent resources: " + resources;
+        s += "\nCurrent resources: " + Resources;
 
         s += "\n\nCurrent hunger rate: " + hungerRate;
         s += "\n\nCurrent sadness rate: " + sadnessRate;

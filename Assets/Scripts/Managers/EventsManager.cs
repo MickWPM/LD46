@@ -23,6 +23,15 @@ public class EventsManager : MonoBehaviour
         PatThePetEvent?.Invoke();
     }
 
+    #region UIEvents
+
+
+
+    #endregion
+
+
+    #region CharacterEvents
+
     public event System.Action<float> CharacterDeathEvent;
     internal void FireDeathEvent(float currentAge)
     {
@@ -36,12 +45,22 @@ public class EventsManager : MonoBehaviour
         CharacterLifeStageChangedEvent?.Invoke(currentLifeStage);
     }
 
+    #endregion
+
+    #region NodeEvents
+
+    public event System.Action<Nodes> NodeSpawnedEvent;
+    internal void FireNodeSpawnedEvent(Nodes node)
+    {
+        NodeSpawnedEvent?.Invoke(node);
+    }
 
     public event System.Action<float> WorkRateChangedByTrainNodeEvent;
     internal void FireChangeWorkRateByTrainNodeEvent(float amount)
     {
         WorkRateChangedByTrainNodeEvent?.Invoke(amount);
     }
+
 
     public event System.Action<float> ResourcesChangedByNodeEvent;
     public void FireChangeResourcesByNodeEvent(float amount)
@@ -101,5 +120,8 @@ public class EventsManager : MonoBehaviour
     {
         WorkRateNodeExhaustedEvent?.Invoke(position);
     }
+
+#endregion
+
 
 }
