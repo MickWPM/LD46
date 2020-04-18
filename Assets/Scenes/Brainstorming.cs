@@ -34,10 +34,8 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     * 
-     * 
-     * 
-     * Sprite change on age and happiness
+     *  Player flow (intro stuff etc)
+     *  Sprite change on age and happiness
      * 
      * ART:
      *  Cursors
@@ -46,16 +44,57 @@ public class Brainstorming : MonoBehaviour
      *  UI art
      *  
      *  Possible:
+     *  Fountain of youth?!?!
+     *  Static bath/bed to wash dirt off/sleep intermittently
+     *  Enemy to dodge (requires click to move) - eg just moving over the screen
+     *  
      *  Tooltips (nodes, me etc?)
-     *  Scale work efficiency and other stats with age
+     *  Scale work efficiency and other stats with age**
      *  Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??
-     * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point
+     * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point?
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
      * 
      * BALANCING:
      * Life loss by hunger/sadness
      * Movement rate by life stages
      * Life stage commencement
      * Initial lifespan
+     * 
+     * LIFESPAN - 5 minutes (change age to be lifespan LEFT over initial lifespan)
+     * 1 minute as a baby (including tutorial stuff) - 0-20%
+     * 2-2.5 minutes adult (possibly two phases, just graphically) 20%-65% (45% total)
+     * Rest as aged 35%
+     * 
+     * Happiness is the fastest depleting resource from work/train
+     * 
+     * 40 seconds to full starvation
+     * 1 minute to full sadness
+     * 
+     * Working will fully deplete food after 30s
+     * Working will fully deplete happiness after 40s
+     * 
+     * Training will fully deplete food after 30s
+     * Training will fully deplete happiness after 20s
+     * 
+     * Playing will fully recover happiness in 20 seconds
+     * Eating will fully recover hunger in 10 seconds
+     * 
+     * Food has 20% per spawn
+     * Play has 30% happiness per spawn and gives 
+     * 
+     * Training increases work rate by 1 every 30s
+     * Training has 0.5 units per spawn
+     * 
+     * Spend ~5-10 seconds at a time working. 1 resource per second
+     * Play = 5
+     * Food = 7
+     * Work = 2
+     * Train = 10
      * 
      */
 }

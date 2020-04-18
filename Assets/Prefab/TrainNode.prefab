@@ -71,8 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cace8fbe1bab084b993bf5dd0cd582f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remaining: 0.1
-  harvestRate: 0.01
+  remaining: 0.5
+  harvestRate: 0.033333335
+  decayRate: 0.0005
 --- !u!1 &8338645646570890302
 GameObject:
   m_ObjectHideFlags: 0

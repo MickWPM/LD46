@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public enum CharacterLifeStage
 public class CharacterStats : MonoBehaviour
 {
     [SerializeField] CharacterLifeStage currentLifeStage = CharacterLifeStage.BABY;
-    [SerializeField] bool degradeWithTime = false;
+    public bool degradeWithTime = false;
     //Do all of these change with age?
     [SerializeField] float lifespan = 300;
     float maxLifespan;
@@ -28,6 +29,12 @@ public class CharacterStats : MonoBehaviour
     float speedScaleBaby = 0.3f, speedScaleAdult = 1.0f, speedScaleAged = 0.6f;
     float movementSpeedScaler = 0.3f;
     public float MovementSpeedScaler { get => movementSpeedScaler; private set => movementSpeedScaler = value; }
+
+    internal void SetInitStats(float happiness, float food)
+    {
+        this.happiness = happiness;
+        this.foodEnergy = food;
+    }
 
     [SerializeField] float resources = 0;
     public float Resources { get => resources; }
@@ -53,7 +60,7 @@ public class CharacterStats : MonoBehaviour
         AddResources( -1 * GameManager.instance.NodeCost(node) );
     }
 
-    float foodRemovedPerWorkSecond = 2, happinessRemovedPerWorkSecond = 2;
+    float foodRemovedPerWorkSecond = 4, happinessRemovedPerWorkSecond = 2;
     void ResourcesNode(float amt)
     {
         AddResources(amt);
@@ -73,7 +80,7 @@ public class CharacterStats : MonoBehaviour
         AddHappiness(amt);
     }
 
-    float foodRemovedPerTrainSecond = 1, happinessRemovedPerTrainSecond = 4;
+    float foodRemovedPerTrainSecond = 4, happinessRemovedPerTrainSecond = 6;
     void TrainNode(float amt)
     {
         AddWorkRate(amt);
@@ -83,13 +90,15 @@ public class CharacterStats : MonoBehaviour
     }
 
 
-    public UnityEngine.UI.Text debugStatText;
     private void Update()
     {
-        timeSincePatThePet += Time.deltaTime;
-        if (degradeWithTime) UpdateStats();
+        if (degradeWithTime)
+        {
+            timeSincePatThePet += Time.deltaTime;
+            UpdateStats();
+            UpdateLifespan();
+        }
 
-        UpdateLifespan();
 
         string s = "DEBUG INFO - STATS:\n";
         s += "\nCurrent age: " + currentAge;
@@ -104,7 +113,7 @@ public class CharacterStats : MonoBehaviour
         s += "\n\nCurrent lifespan loss rate: " + lifespanLossRate;
 
 
-        debugStatText.text = s;
+        GameManager.instance.debugStatText.text = s;
     }
 
     float pattingRecharge = 5;
@@ -136,14 +145,14 @@ public class CharacterStats : MonoBehaviour
         timeSincePatThePet = 0;
     }
 
-    float babyRelativeAge = 0.15f;
-    float OldAgeRelativeAge = 0.6f;
+    float babyRelativeAge = 0.2f;
+    float OldAgeRelativeAge = 0.65f;
 
 
     public float GetHappinessLifespanLossModifier()
     {
         if (happiness > 0.9f)
-            return 0.8f;
+            return 0.9f;
 
         if (happiness > 0.5f)
             return 1;
@@ -157,7 +166,7 @@ public class CharacterStats : MonoBehaviour
     public float GetHungerLifespanLossModifier()
     {
         if (foodEnergy > 0.9f)
-            return 0.8f;
+            return 0.9f;
 
         if (foodEnergy > 0.5f)
             return 1;
@@ -182,6 +191,7 @@ public class CharacterStats : MonoBehaviour
         {
             SetLifeStage(CharacterLifeStage.DEAD);
             EventsManager.instance.FireDeathEvent(currentAge);
+            return;
         }
 
         //Is there a better place for this?
@@ -275,6 +285,11 @@ public class CharacterStats : MonoBehaviour
 
     public float LifespanRelativeAge()
     {
-        return currentAge / maxLifespan;
+        return (maxLifespan - lifespan) / maxLifespan;
+    }
+
+    public void ForceDeath()
+    {
+        lifespan = 0;
     }
 }

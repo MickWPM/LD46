@@ -152,4 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1263409b2d3184abd3657791c407fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remaining: 100
+  remaining: 30
+  harvestRate: 3
+  decayRate: 0.01

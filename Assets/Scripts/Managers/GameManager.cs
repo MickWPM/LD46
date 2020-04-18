@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public UnityEngine.UI.Text debugStatText;
     public static GameManager instance;
 
     [SerializeField] float foodNodeCost;
@@ -22,11 +23,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        if (characterStats == null) characterStats = FindObjectOfType<CharacterStats>();
     }
 
     private void Start()
     {
+        EventsManager.instance.PlayerSpawnedEvent += (CharacterStats stats) => { characterStats = stats; };
+
         EventsManager.instance.CharacterDeathEvent += (float age) => 
         {
             characterStats.gameObject.SetActive(false);

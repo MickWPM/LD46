@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d38d58b9740944abcfb2bb6f4b3837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remaining: 10
-  harvestRate: 0.1
+  remaining: 50
+  harvestRate: 15
+  decayRate: 0.1
 --- !u!61 &5934221200800500307
 BoxCollider2D:
   m_ObjectHideFlags: 0

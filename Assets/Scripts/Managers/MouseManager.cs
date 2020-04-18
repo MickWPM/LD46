@@ -6,7 +6,7 @@ using UnityEngine;
 public class MouseManager : MonoBehaviour
 {
     [SerializeField]
-    CharacterController timTam;
+    CharacterController timTamController;
 
     public MouseHoverCategories currentHover;
 
@@ -20,9 +20,10 @@ public class MouseManager : MonoBehaviour
     private void Start()
     {
         EventsManager.instance.MouseHoverObjectUpdatedEvent += UpdateMouseCursor;
+        EventsManager.instance.PlayerSpawnedEvent += (CharacterStats stats) => { timTamController = stats.gameObject.GetComponent<CharacterController>(); };
     }
 
-    public Texture2D resourceCursor, foodCursor, playCursor, trainCursor, defaultCursor, patThePetCursor;
+    public Texture2D resourceCursor, foodCursor, playCursor, trainCursor, defaultCursor, patThePetCursor, eggCrackCursor;
     void UpdateMouseCursor(MouseHoverCategories category)
     {
         switch (category)
@@ -42,6 +43,9 @@ public class MouseManager : MonoBehaviour
             case MouseHoverCategories.ME:
                 Cursor.SetCursor(patThePetCursor, Vector2.zero, CursorMode.ForceSoftware);
                 break;
+            case MouseHoverCategories.EGG:
+                Cursor.SetCursor(eggCrackCursor, Vector2.zero, CursorMode.ForceSoftware);
+                break;
             case MouseHoverCategories.NULL:
             case MouseHoverCategories.GROUND:
             default:
@@ -54,23 +58,38 @@ public class MouseManager : MonoBehaviour
     {
         if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            return;
+            SetCurrentHover(MouseHoverCategories.NULL);
+        } else
+        {
+            UpdateMouseHover();
         }
 
-        UpdateMouseHover();
 
         if (Input.GetMouseButtonDown(0))
         {
             switch (currentHover)
             {
                 case MouseHoverCategories.RESOURCE:
+                    EventsManager.instance.FireWorkNodeClickedEvent();
+                    timTamController.ClickedObject(hoverObject);
+                    break;
                 case MouseHoverCategories.FOOD:
+                    EventsManager.instance.FireFoodNodeClickedEvent();
+                    timTamController.ClickedObject(hoverObject);
+                    break;
                 case MouseHoverCategories.PLAY:
+                    EventsManager.instance.FirePlayNodeClickedEvent();
+                    timTamController.ClickedObject(hoverObject);
+                    break;
                 case MouseHoverCategories.TRAIN:
-                    timTam.ClickedObject(hoverObject);
+                    EventsManager.instance.FireTrainNodeClickedEvent();
+                    timTamController.ClickedObject(hoverObject);
                     break;
                 case MouseHoverCategories.ME:
                     EventsManager.instance.FirePatThePetEvent();
+                    break;
+                case MouseHoverCategories.EGG:
+                    EventsManager.instance.FireEggClickedEvent();
                     break;
                 case MouseHoverCategories.NULL:
                 case MouseHoverCategories.GROUND:
@@ -104,13 +123,26 @@ public class MouseManager : MonoBehaviour
                     newHoverCat = MouseHoverCategories.ME;
                 } else
                 {
-                    //Only other option initially is ground.
-                    //This may need to be udpated later
-                    newHoverCat = MouseHoverCategories.GROUND;
+                    PlayerEgg egg = hoverObject.GetComponent<PlayerEgg>();
+                    if (egg != null)
+                    {
+                        newHoverCat = MouseHoverCategories.EGG;
+                    } else
+                    {
+                        //Only other option initially is ground.
+                        //This may need to be udpated later
+                        newHoverCat = MouseHoverCategories.GROUND;
+                    }
                 }
             }
         }
 
+        SetCurrentHover(newHoverCat);
+
+    }
+
+    void SetCurrentHover(MouseHoverCategories newHoverCat)
+    {
         if (currentHover != newHoverCat)
         {
             currentHover = newHoverCat;
@@ -128,5 +160,6 @@ public enum MouseHoverCategories
     RESOURCE,
     FOOD,
     PLAY,
-    TRAIN
+    TRAIN,
+    EGG
 }

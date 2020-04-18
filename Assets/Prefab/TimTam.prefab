@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c8ed53a999cd74698fd7510442d342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 5
   currentTarget: {fileID: 0}
 --- !u!114 &219159182
 MonoBehaviour:
@@ -62,11 +62,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLifeStage: 0
   degradeWithTime: 1
-  lifespan: 30
+  lifespan: 300
   foodEnergy: 100
-  hungerRate: 3
+  hungerRate: 2.5
   happiness: 100
-  sadnessRate: 0.8333333
+  sadnessRate: 1.6666666
   workRate: 1
   lifespanLossRate: 1
   resources: 0

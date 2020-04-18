@@ -11,6 +11,13 @@ public class EventsManager : MonoBehaviour
         instance = this;
     }
 
+    public event System.Action EndTutorialEvent;
+    internal void FireEndTutorialEvent()
+    {
+        EndTutorialEvent?.Invoke();
+    }
+
+
     public event System.Action<MouseHoverCategories> MouseHoverObjectUpdatedEvent;
     public void FireMouseHoverObjectUpdatedEvent(MouseHoverCategories hoverObjectCategory)
     {
@@ -32,6 +39,24 @@ public class EventsManager : MonoBehaviour
 
     #region CharacterEvents
 
+    public event System.Action CharacterEggClickedEvent;
+    internal void FireEggClickedEvent()
+    {
+        CharacterEggClickedEvent?.Invoke();
+    }
+
+    public event System.Action<Vector3> CharacterEggHatchedEvent;
+    internal void FireEggHatchedEvent(Vector3 hatchLocation)
+    {
+        CharacterEggHatchedEvent?.Invoke(hatchLocation);
+    }
+
+    public event System.Action<CharacterStats> PlayerSpawnedEvent;
+    internal void FirePlayerSpawnedEvent(CharacterStats timtam)
+    {
+        PlayerSpawnedEvent?.Invoke(timtam);
+    }
+
     public event System.Action<float> CharacterDeathEvent;
     internal void FireDeathEvent(float currentAge)
     {
@@ -40,6 +65,7 @@ public class EventsManager : MonoBehaviour
 
 
     public event System.Action<CharacterLifeStage> CharacterLifeStageChangedEvent;
+
     internal void FireChangedLifeStageEvent(CharacterLifeStage currentLifeStage)
     {
         CharacterLifeStageChangedEvent?.Invoke(currentLifeStage);
@@ -48,6 +74,28 @@ public class EventsManager : MonoBehaviour
     #endregion
 
     #region NodeEvents
+
+    public event System.Action PlayNodeClickedEvent;
+    internal void FirePlayNodeClickedEvent()
+    {
+        PlayNodeClickedEvent?.Invoke();
+    }
+    public event System.Action WorkNodeClickedEvent;
+    internal void FireWorkNodeClickedEvent()
+    {
+        WorkNodeClickedEvent?.Invoke();
+    }
+    public event System.Action TrainNodeClickedEvent;
+    internal void FireTrainNodeClickedEvent()
+    {
+        TrainNodeClickedEvent?.Invoke();
+    }
+    public event System.Action FoodNodeClickedEvent;
+    internal void FireFoodNodeClickedEvent()
+    {
+        FoodNodeClickedEvent?.Invoke();
+    }
+
 
     public event System.Action<Nodes> NodeSpawnedEvent;
     internal void FireNodeSpawnedEvent(Nodes node)
