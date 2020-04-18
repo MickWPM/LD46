@@ -34,13 +34,30 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     * Lifespan drain for low happiness/food:
-     * *  Slow lifespan drain below 50% happiness/food
-     * *  Big Lifespan hits below zero happiness/food
+     * Spawn in node from user button click (subtract from user resources)
+     * (capture button click so it doesnt tell the pet to move)
+     * 
+     * 
+     * 
+     * 
+     * Sprite change on age and happiness
+     * 
+     * ART:
+     *  Cursors
+     *  Train, Food, Play, Work interaction points
+     *  Character, smile, flat and sad, dummy, hair
+     *  UI art
      *  
      *  Possible:
+     *  Tooltips (nodes, me etc?)
      *  Scale work efficiency and other stats with age
      *  Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??
+     * 
+     * BALANCING:
+     * Life loss by hunger/sadness
+     * Movement rate by life stages
+     * Life stage commencement
+     * Initial lifespan
      * 
      */
 }

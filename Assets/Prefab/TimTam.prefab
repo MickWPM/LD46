@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9208613142418051995}
   - component: {fileID: 219159181}
   - component: {fileID: 219159182}
+  - component: {fileID: 219159183}
   m_Layer: 0
   m_Name: TimTam
   m_TagString: Untagged
@@ -59,13 +60,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a0ef408e327bd41af0de6f985bf6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifespan: 300
+  currentLifeStage: 0
+  degradeWithTime: 1
+  lifespan: 30
   foodEnergy: 100
   hungerRate: 3
   happiness: 100
-  sadnessRate: 0
+  sadnessRate: 0.8333333
   workRate: 1
+  lifespanLossRate: 1
   resources: 0
+  debugStatText: {fileID: 0}
+--- !u!61 &219159183
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630568939305200713}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.48, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4892872161537464671
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,18 @@ public class TrainNode : MonoBehaviour, IClickable
 {
     public float remaining = 0.1f;
     public float harvestRate = 0.01f;
+    public float decayRate = 0.0005f;
+
+    void Update()
+    {
+        remaining -= Time.deltaTime * decayRate;
+        if (remaining <= 0)
+        {
+            EventsManager.instance.FireWorkRateNodeExhaustedEvent(transform.position);
+            Destroy(gameObject);
+        }
+    }
+
 
     public bool TryAction(float workRate)
     {
@@ -22,6 +34,7 @@ public class TrainNode : MonoBehaviour, IClickable
 
         return remaining > 0;
     }
+
 
     public MouseHoverCategories GetClickableCategory()
     {

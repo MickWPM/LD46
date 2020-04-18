@@ -131,10 +131,43 @@ public class CharacterStats : MonoBehaviour
     float OldAgeRelativeAge = 0.6f;
 
 
+    public float GetHappinessLifespanLossModifier()
+    {
+        if (happiness > 0.9f)
+            return 0.8f;
+
+        if (happiness > 0.5f)
+            return 1;
+
+        if (happiness > 0.25f)
+            return 1.25f;
+
+        return 1.5f;
+    }
+
+    public float GetHungerLifespanLossModifier()
+    {
+        if (foodEnergy > 0.9f)
+            return 0.8f;
+
+        if (foodEnergy > 0.5f)
+            return 1;
+
+        if (foodEnergy > 0.25f)
+            return 1.25f;
+
+        return 1.5f;
+    }
+
+    public float GetLifespanLossrate()
+    {
+        return GetHappinessLifespanLossModifier() * GetHungerLifespanLossModifier() * lifespanLossRate;
+    }
+
     void UpdateLifespan()
     {
         currentAge += Time.deltaTime;
-        lifespan -= Time.deltaTime * lifespanLossRate;
+        lifespan -= Time.deltaTime * GetLifespanLossrate();
 
         if (lifespan <= 0)
         {
