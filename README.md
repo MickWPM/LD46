@@ -12,5 +12,13 @@ Keep it alive as long as possible while juggling hunger, happiness etc through v
 Basic mechanics implemented:
 ![Basic mechanics implemented](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/InitialMechanics.gif)
 
-User experience now includes a (skippable) tutorial
+Initial (skippable) tutorial
 ![End of the tutorial](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/V0-1%20tutorial.png)
+
+
+First full gameplay with art (initial pass at least) "V0-3"
+Tutorial:
+![Tutorial intro](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/Intro.png)
+
+Gameplay:
+![Gameplay](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/V0-3%20gameplay.png)
