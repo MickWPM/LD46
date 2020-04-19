@@ -34,8 +34,6 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     *  UI backing (crumpled paper??)
-     *  Font (Hand writing?)
      * 
      * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point
      * Also use range of screen only in "game area"
@@ -55,12 +53,9 @@ public class Brainstorming : MonoBehaviour
      *  Fountain of youth?!?!
      *  Static bath/bed to wash dirt off/sleep intermittently
      * **** Enemy to dodge (requires click to move) - eg just moving over the screen
-     *      Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??
-     *  
+     *      Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??     * 
      * 
-     * 
-     * 
-     * 
+     *  UI Buttons 'box'
      * 
      * 
      * 

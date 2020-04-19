@@ -129,6 +129,7 @@ public class TutorialManager : MonoBehaviour
     }
 
     public GameObject UItoEnable;
+    public Transform liveWorkLoc;
     public void EndTutorial()
     {
         tutorialFinishedPopup.SetActive(false);
@@ -145,7 +146,7 @@ public class TutorialManager : MonoBehaviour
         //UI update etc
         //All can probably be done by responding to the event??
         timtam.SetInitStats(100, 100);
-        Instantiate(workNode, workLoc.position, Quaternion.identity);
+        Instantiate(workNode, liveWorkLoc.position, Quaternion.identity);
 
         UItoEnable.SetActive(true);
     }

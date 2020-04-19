@@ -25,6 +25,7 @@ public class UI_Manager : MonoBehaviour
         EventsManager.instance.CharacterDeathEvent += OnCharacterDied;
         EventsManager.instance.CharacterStatChangedEvent += OnStatUpdate;
         EventsManager.instance.MouseHoverObjectUpdatedEvent += OnMouseHoverObjectChange;
+        EventsManager.instance.EndTutorialEvent += () => { OnResourcesUpdated(0); };
     }
 
     private void Update()

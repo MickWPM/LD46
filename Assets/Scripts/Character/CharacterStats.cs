@@ -54,10 +54,11 @@ public class CharacterStats : MonoBehaviour
     float movementSpeedScaler = 0.3f;
     public float MovementSpeedScaler { get => movementSpeedScaler; private set => movementSpeedScaler = value; }
 
-    internal void SetInitStats(float happiness, float food)
+    internal void SetInitStats(float happiness, float food, float resources = 0)
     {
         this.happiness = happiness;
         this.foodEnergy = food;
+        this.resources = resources;
     }
 
     internal void CheatResources()

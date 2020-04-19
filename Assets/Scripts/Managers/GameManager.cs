@@ -62,8 +62,6 @@ public class GameManager : MonoBehaviour
 
     internal bool CanAfford(Nodes node)
     {
-
-
         return NodeCost(node) <= characterStats.Resources;
     }
 }
