@@ -60,7 +60,7 @@ public class TutorialManager : MonoBehaviour
     public Transform playLoc;
     IEnumerator DoPlay()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         spawnedPlayNode = Instantiate(playNode, playLoc.position, Quaternion.identity);
         EventsManager.instance.PlayNodeClickedEvent += PlayDone;
         tutorialPlayPopup.SetActive(true);

@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 3042499010806139986}
   - component: {fileID: 5972155500892179013}
   m_Layer: 0
-  m_Name: Hexagon
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,9 +142,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1192842477
-  m_SortingLayer: 2
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ceb814ea343f11a4ebae8cc955cb5dd7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c916cab557794084f8b9402ceca1d158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

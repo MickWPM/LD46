@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
-    const float actionRange = 1f;
+    const float actionRange = 2f;
     IClickable currentInteractionTarget;
     [SerializeField] Transform currentTarget;
     CharacterStats stats;

@@ -34,13 +34,7 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     *  *Sprite change on age and happiness
-     *  Play node (beach ball?) 
-     *  Food node (Steak on dish)
-     *  Work node (Computer?)
-     *  Train node (Weights)
-     *  
-     *  Cursors (64x64?)
+     *  UI Display (Happiness, Hunger, Resources)
      *  UI backing (crumpled paper??)
      *  Font (Hand writing?)
      * 

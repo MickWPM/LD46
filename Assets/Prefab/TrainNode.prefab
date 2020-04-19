@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.67, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &6202435424448494966
 MonoBehaviour:
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 6537219889892896374}
   - component: {fileID: 2175952824495163580}
   m_Layer: 0
-  m_Name: Diamond
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 8338645646570890302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3067, y: 1.3067, z: 1.3067}
   m_Children: []
   m_Father: {fileID: 6222176612175615233}
   m_RootOrder: 0
@@ -142,9 +142,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1192842477
-  m_SortingLayer: 2
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 54533a8c00b4f59478557026624245b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5b9f8d703badf24fb53b44daefad384, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
