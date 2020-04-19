@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
         };
     }
 
+    public CharacterLifeStage CurrentLifeStage()
+    {
+        return characterStats.GetCurrentLifeStage();
+    }
+
     internal float NodeCost(Nodes node)
     {
         float cost = 99999999;

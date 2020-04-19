@@ -34,26 +34,23 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point
-     * Also use range of screen only in "game area"
      * 
      * SOUNDS!
      * 
-     * Work credits - piggy bank image?
-     * Stone engraved font??
+     * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point
      * 
-     *  *Build UI mechanics (middle cancel, raidal options) for right click
-     *  Tooltips (nodes, me etc?) **
-     *  Scale work efficiency and other stats with age**
-     * 
-     * Art pass 2 - Drop shadows, texture etc for character
-     *  
      *  Possible:
-     *  Egg cracked effect (disappear outwards)
      *  Fountain of youth?!?!
      *  Static bath/bed to wash dirt off/sleep intermittently
      * **** Enemy to dodge (requires click to move) - eg just moving over the screen
      *      Move to point (clicking on terrain) - Maybe? More strategy if you cant move at all??     * 
+     * 
+     * Art pass 2 - Drop shadows, texture etc for character
+     *  Egg cracked effect (disappear outwards)
+     * 
+     * BALANCE:
+     *  Scale work efficiency and other stats with age**
+     *  
      * 
      *  UI Buttons 'box'
      * 

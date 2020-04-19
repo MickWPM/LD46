@@ -221,6 +221,10 @@ public class CharacterStats : MonoBehaviour
     float babyRelativeAge = 0.2f;
     float OldAgeRelativeAge = 0.65f;
 
+    public CharacterLifeStage GetCurrentLifeStage()
+    {
+        return currentLifeStage;
+    }
 
     public float GetHappinessLifespanLossModifier()
     {
