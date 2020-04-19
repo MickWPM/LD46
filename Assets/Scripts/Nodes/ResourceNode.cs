@@ -8,6 +8,11 @@ public class ResourceNode : MonoBehaviour, IClickable
     public float harvestRate = 1f;
     public float decayRate = 0.0005f;
 
+    float initialQty;
+    private void Start()
+    {
+        initialQty = remaining;
+    }
     void Update()
     {
         remaining -= Time.deltaTime * decayRate;
@@ -37,5 +42,9 @@ public class ResourceNode : MonoBehaviour, IClickable
     public MouseHoverCategories GetClickableCategory()
     {
         return MouseHoverCategories.RESOURCE;
+    }
+    public float GetPercentRemaining()
+    {
+        return 100f * remaining / initialQty;
     }
 }

@@ -18,10 +18,10 @@ public class EventsManager : MonoBehaviour
     }
 
 
-    public event System.Action<MouseHoverCategories> MouseHoverObjectUpdatedEvent;
-    public void FireMouseHoverObjectUpdatedEvent(MouseHoverCategories hoverObjectCategory)
+    public event System.Action<MouseHoverCategories, GameObject> MouseHoverObjectUpdatedEvent;
+    public void FireMouseHoverObjectUpdatedEvent(MouseHoverCategories hoverObjectCategory, GameObject hoverObject)
     {
-        MouseHoverObjectUpdatedEvent?.Invoke(hoverObjectCategory);
+        MouseHoverObjectUpdatedEvent?.Invoke(hoverObjectCategory, hoverObject);
     }
 
     public event System.Action PatThePetEvent;
@@ -38,7 +38,12 @@ public class EventsManager : MonoBehaviour
 
 
     #region CharacterEvents
-    
+
+    public event System.Action<CharacterStatType, float> CharacterStatChangedEvent;
+    internal void FireCharacterStatChangedEvent(CharacterStatType stat, float value)
+    {
+        CharacterStatChangedEvent?.Invoke(stat, value);
+    }
 
     public event System.Action<CharacterHungerState, CharacterHungerState> ChangeHungerStateEvent;
     internal void FireChangeHungerStateEvent(CharacterHungerState currentHungerState, CharacterHungerState newHungerState)
@@ -143,7 +148,7 @@ public class EventsManager : MonoBehaviour
     }
 
     public event System.Action HappinessBelowZeroEvent;
-    internal void FireHapinessBelowZeroEvent()
+    internal void FireHappinessBelowZeroEvent()
     {
         HappinessBelowZeroEvent?.Invoke();
     }

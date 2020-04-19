@@ -8,6 +8,11 @@ public class PlayNode : MonoBehaviour, IClickable
     public float harvestRate = 0.1f;
     public float decayRate = 0.05f;
 
+    float initialQty;
+    private void Start()
+    {
+        initialQty = remaining;
+    }
     void Update()
     {
         remaining -= Time.deltaTime * decayRate;
@@ -37,6 +42,10 @@ public class PlayNode : MonoBehaviour, IClickable
     public MouseHoverCategories GetClickableCategory()
     {
         return MouseHoverCategories.PLAY;
+    }
+    public float GetPercentRemaining()
+    {
+        return 100f * remaining / initialQty;
     }
 
 }

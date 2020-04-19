@@ -6,4 +6,5 @@ public interface IClickable
 {
     bool TryAction(float workRate);
     MouseHoverCategories GetClickableCategory();
+    float GetPercentRemaining();
 }

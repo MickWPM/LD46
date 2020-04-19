@@ -8,6 +8,12 @@ public class TrainNode : MonoBehaviour, IClickable
     public float harvestRate = 0.01f;
     public float decayRate = 0.0005f;
 
+    float initialQty;
+    private void Start()
+    {
+        initialQty = remaining;
+    }
+
     void Update()
     {
         remaining -= Time.deltaTime * decayRate;
@@ -39,5 +45,10 @@ public class TrainNode : MonoBehaviour, IClickable
     public MouseHoverCategories GetClickableCategory()
     {
         return MouseHoverCategories.TRAIN;
+    }
+
+    public float GetPercentRemaining()
+    {
+        return 100f * remaining / initialQty;
     }
 }

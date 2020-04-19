@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CharacterStatType
+{
+    RESOURCES,
+    HUNGER,
+    HAPPINESS
+}
+
 public enum CharacterLifeStage
 {
     BABY,
@@ -55,7 +62,8 @@ public class CharacterStats : MonoBehaviour
 
     internal void CheatResources()
     {
-        resources = 999999;
+        resources = 0;
+        AddResources(999);
     }
 
     [SerializeField] float resources = 0;
@@ -315,12 +323,14 @@ public class CharacterStats : MonoBehaviour
             foodEnergy = 0;
             EventsManager.instance.FireFoodEnergyBelowZeroEvent();
         }
+        EventsManager.instance.FireCharacterStatChangedEvent(CharacterStatType.HUNGER, foodEnergy);
 
         if (happiness < 0)
         {
             happiness = 0;
-            EventsManager.instance.FireHapinessBelowZeroEvent();
+            EventsManager.instance.FireHappinessBelowZeroEvent();
         }
+        EventsManager.instance.FireCharacterStatChangedEvent(CharacterStatType.HAPPINESS, happiness);
     }
 
     void AddWorkRate(float amt)
@@ -332,17 +342,23 @@ public class CharacterStats : MonoBehaviour
     {
         happiness += amt;
         if (happiness > 100) happiness = 100;
+
+        EventsManager.instance.FireCharacterStatChangedEvent(CharacterStatType.HAPPINESS, happiness);
     }
 
     void AddFood(float amt)
     {
         foodEnergy += amt;
         if (foodEnergy > 100) foodEnergy = 100;
+
+        EventsManager.instance.FireCharacterStatChangedEvent(CharacterStatType.HUNGER, foodEnergy);
     }
 
     void AddResources(float amt)
     {
         resources += amt;
+
+        EventsManager.instance.FireCharacterStatChangedEvent(CharacterStatType.RESOURCES, resources);
     }
 
     public float WorkRate()

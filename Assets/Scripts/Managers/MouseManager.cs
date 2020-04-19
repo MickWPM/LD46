@@ -24,7 +24,7 @@ public class MouseManager : MonoBehaviour
     }
 
     public Texture2D resourceCursor, foodCursor, playCursor, trainCursor, defaultCursor, patThePetCursor, eggCrackCursor;
-    void UpdateMouseCursor(MouseHoverCategories category)
+    void UpdateMouseCursor(MouseHoverCategories category, GameObject hoverObject)
     {
         switch (category)
         {
@@ -146,7 +146,7 @@ public class MouseManager : MonoBehaviour
         if (currentHover != newHoverCat)
         {
             currentHover = newHoverCat;
-            EventsManager.instance.FireMouseHoverObjectUpdatedEvent(currentHover);
+            EventsManager.instance.FireMouseHoverObjectUpdatedEvent(currentHover, hoverObject);
         }
     }
 
