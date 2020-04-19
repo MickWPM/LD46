@@ -51,4 +51,9 @@ public class TrainNode : MonoBehaviour, IClickable
     {
         return 100f * remaining / initialQty;
     }
+
+    public string GetDescription()
+    {
+        return "Train";
+    }
 }

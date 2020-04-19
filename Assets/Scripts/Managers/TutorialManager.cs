@@ -12,6 +12,7 @@ public class TutorialManager : MonoBehaviour
     private void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
+        UItoEnable.SetActive(false);
         StartTutorial();
     }
 

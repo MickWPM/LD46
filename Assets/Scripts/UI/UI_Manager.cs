@@ -6,9 +6,14 @@ using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
 {
+    public Image musicToggleImage;
+    public Sprite musicOnSprite, musicOffSprite;
+    MusicManager musicManager;
+
     [SerializeField] Button buyFoodButton, buyHappinessButton, buyWorkButton, buyTrainingButton;
     public Text hoverPopupText;
     public GameObject hoverPopupParent;
+
     private void Awake()
     {
         buyFoodButton.interactable = false;
@@ -20,12 +25,26 @@ public class UI_Manager : MonoBehaviour
         hoverPopupParent.SetActive(false);
     }
 
+    public MusicManager musicManagerBackupPrefab;
     void Start()
     {
         EventsManager.instance.CharacterDeathEvent += OnCharacterDied;
         EventsManager.instance.CharacterStatChangedEvent += OnStatUpdate;
         EventsManager.instance.MouseHoverObjectUpdatedEvent += OnMouseHoverObjectChange;
         EventsManager.instance.EndTutorialEvent += () => { OnResourcesUpdated(0); };
+
+        musicManager = GameObject.FindObjectOfType<MusicManager>();
+        if (musicManager == null)
+        {
+            musicManager = Instantiate(musicManagerBackupPrefab);
+            musicManager.gameObject.SetActive(true);
+        }
+
+        buyFoodButton.interactable = false;
+        buyHappinessButton.interactable = false;
+        buyWorkButton.interactable = false;
+        buyTrainingButton.interactable = false;
+        musicToggleImage.sprite = musicManager.IsMusicOn() ? musicOnSprite : musicOffSprite;
     }
 
     private void Update()
@@ -34,9 +53,15 @@ public class UI_Manager : MonoBehaviour
             UpdateClickablePopup();
     }
 
+    public void ToggleMusic()
+    {
+        bool musicOn = musicManager.ToggleMusicNowOn();
+        musicToggleImage.sprite = musicOn ? musicOnSprite : musicOffSprite;
+    }
+
     void UpdateClickablePopup()
     {
-        hoverPopupText.text = $"Node: Training.\nPercent remaining: {Mathf.RoundToInt(clickableHover.GetPercentRemaining())}%";
+        hoverPopupText.text = $"Node: {clickableHover.GetDescription()}.\nPercent remaining: {Mathf.RoundToInt(clickableHover.GetPercentRemaining())}%";
         hoverPopupParent.SetActive(true);
     }
 

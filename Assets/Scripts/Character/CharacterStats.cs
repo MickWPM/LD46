@@ -56,9 +56,11 @@ public class CharacterStats : MonoBehaviour
 
     internal void SetInitStats(float happiness, float food, float resources = 0)
     {
+        Debug.Log("Init stats set");
         this.happiness = happiness;
         this.foodEnergy = food;
         this.resources = resources;
+        EventsManager.instance.FireChangeResourcesByNodeEvent(0);
     }
 
     internal void CheatResources()
@@ -135,7 +137,7 @@ public class CharacterStats : MonoBehaviour
         {
             newHappinessState = CharacterHappinessState.HAPPY;
         }
-        else if (happiness < 10f)
+        else if (happiness < 20f)
         {
             newHappinessState = CharacterHappinessState.SAD;
         }
@@ -151,7 +153,7 @@ public class CharacterStats : MonoBehaviour
         {
             newHungerState = CharacterHungerState.FULL;
         }
-        else if (foodEnergy < 10f)
+        else if (foodEnergy < 20f)
         {
             newHungerState = CharacterHungerState.STARVING;
         }
@@ -244,19 +246,24 @@ public class CharacterStats : MonoBehaviour
         return 1;
     }
 
+
     public float GetHungerLifespanLossModifier()
     {
-        if (foodEnergy > 0.9f)
-            return 0.9f;
-
-        if (foodEnergy > 0.5f)
-            return 1;
-
-        if (foodEnergy > 0.25f)
-            return 1.25f;
-
-        return 1.5f;
+        switch (currentHungerState)
+        {
+            case CharacterHungerState.FULL:
+                return 0.9f;
+            case CharacterHungerState.NORMAL:
+                return 1;
+            case CharacterHungerState.STARVING:
+                return 1.25f;
+            default:
+                Debug.LogError($"Happiness state {currentHungerState} not handled");
+                break;
+        }
+        return 1;
     }
+
 
     public float GetLifespanLossrate()
     {

@@ -34,12 +34,6 @@ public class Brainstorming : MonoBehaviour
      * BUGS:
      * None known
      * 
-     *  To implement:
-     * 
-     * Intro screen 
-     * Music manager - dont destroy on load from intro screen
-     * UI to toggle music on/off
-     * 
      * V1.0!!!
      * 
      * 
