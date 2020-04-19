@@ -705,7 +705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'What a happy little ernie....
+  m_Text: 'What a happy little fella....
 
 
     Looking a little bit hungry though
@@ -1004,6 +1004,16 @@ MonoBehaviour:
   babyPat: {fileID: 8300000, guid: cf428e60ad74d914d9f59a0f22046507, type: 3}
   adultPat: {fileID: 8300000, guid: 11d937b5a228cee408c19398aa8d1d8e, type: 3}
   oldAgePat: {fileID: 8300000, guid: 15494ad940090c24b8dbf2683a248a48, type: 3}
+  clickableClicked: {fileID: 8300000, guid: 89ea48a47f6b868489d61e868c3ddf08, type: 3}
+  playingNodeAction: {fileID: 8300000, guid: d9b0bff5fd91a2e48a4de182883d856b, type: 3}
+  eatingNodeAction: {fileID: 8300000, guid: c312d6751ac35eb4cba0865ce7509d83, type: 3}
+  workingNodeAction: {fileID: 8300000, guid: 24e406c8c05a9bc4b86220e4fd8329fe, type: 3}
+  trainingNodeAction: {fileID: 8300000, guid: db336d8c2cdfd0c4b8a3eb4939dda039, type: 3}
+  becomeAdult: {fileID: 8300000, guid: 3d1e3b76ad5412749b7ba7c4fa89500a, type: 3}
+  becomeOld: {fileID: 8300000, guid: 3dda972afb0936448987532b2d5b4d9d, type: 3}
+  die: {fileID: 8300000, guid: bccd0330cac30ae428dbc4bf1e1149d8, type: 3}
+  hungryTummy: {fileID: 8300000, guid: 56157709b3fb2a442bd0ba77f9223cc4, type: 3}
+  sadCry: {fileID: 8300000, guid: 2e1d60f082552d34e848f635aa462629, type: 3}
 --- !u!1 &467769371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,10 +2298,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Congratulations on your new XXXX!
+  m_Text: 'Congratulations on your new little TimTam!
 
 
-    Click the egg to hatch it'
+    Click the egg to hatch
+    it!'
 --- !u!222 &989120950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3252,7 +3263,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Note a playful interaction point has appeared! \n\nBabies (and all life)
-    NEEDS playto,e so click on it now!\n\n(Great work on the pat by the way - just
+    NEED playtime so click on it now!\n\n(Great work on the pat by the way - just
     dont overdo it!)"
 --- !u!222 &1421488677
 CanvasRenderer:
@@ -4298,11 +4309,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'It is looking a little glum - why dont you try and cheer it up by giving
-    it a bit of a pat. Babies love it! So do oldies really....
+    it a bit of a pat. Babies love it! So do oldies really.
 
 
-    Maybe dont go
-    around patting adults though.'
+    Maybe dont go around
+    patting adults though...'
 --- !u!222 &1746185722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5145,6 +5156,7 @@ GameObject:
   - component: {fileID: 2042084982}
   - component: {fileID: 2042084983}
   - component: {fileID: 2042084984}
+  - component: {fileID: 2042084985}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -5251,6 +5263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ceec97977c8a6d4fba0249b580c80fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupAudio: {fileID: 8300000, guid: 5896591e918058d4ca0913162c353499, type: 3}
   allTutorialUI: {fileID: 1672296683}
   tutorialIntroPopup: {fileID: 590224907}
   timtamPrefab: {fileID: 219159182, guid: d22463e10e517ab4c815dded522eced0, type: 3}
@@ -5283,6 +5296,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillPlayer: 100
   GiveResources: 109
+--- !u!82 &2042084985
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042084977}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2042620191
 GameObject:
   m_ObjectHideFlags: 0

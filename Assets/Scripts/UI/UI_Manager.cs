@@ -108,7 +108,7 @@ public class UI_Manager : MonoBehaviour
         buyWorkButton.interactable = GameManager.instance.CanAfford(Nodes.WORK);
         buyTrainingButton.interactable = GameManager.instance.CanAfford(Nodes.TRAIN);
 
-        resourcesText.text = Mathf.RoundToInt(value).ToString();
+        resourcesText.text = Mathf.FloorToInt(value).ToString();
     }
 
 

@@ -1,21 +1,22 @@
 UI
 popupButtonPress - Popup button press (tutorial and game over - another boop sound?)
 spawnButtonPress - Spawn button clicked
-*writingScratch - Scratching writing for tutorial popup
+writingScratch - Scratching writing for tutorial popup
 
 CHARACTER:
 eggTap - Egg tap
 eggCrack - Egg crack
 rawPat - Patting sound
 babyPat, adultPat, oldAgePat - Patting reaction sound (Baby, Adult, Old age) mixed with patting sound
-*becomeAdult
-*becomeOld - Life stage change sound (baby->adult, adult->old age)
-*die - Death sound
-*hungryTummy - Food below zero
-*sadCry - Happiness below zero
+becomeAdult
+becomeOld - Life stage change sound (baby->adult, adult->old age)
+die - Death sound
+hungryTummy - Food below zero
+sadCry - Happiness below zero
+
 
 NODES:
-*clickableClicked - Node clicked sound (button 'boop')
+clickableClicked - Node clicked sound (button 'boop')
 *playingNodeAction - Playing sound (bouncing the ball)
 *eatingNodeAction - Eating food sound
 *workingNodeAction - Working sound (keyboard)

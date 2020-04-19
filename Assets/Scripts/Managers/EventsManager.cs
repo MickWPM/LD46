@@ -140,6 +140,13 @@ public class EventsManager : MonoBehaviour
         FoodAddedByNodeEvent?.Invoke(amount);
     }
 
+    
+
+    public event System.Action<float> HappinessAddedByPatEvent;
+    public void FireHappinessAddedByPatEvent(float amount)
+    {
+        HappinessAddedByPatEvent?.Invoke(amount);
+    }
 
     public event System.Action<float> HappinessAddedByNodeEvent;
     public void FireAddHappinessByNodeEvent(float amount)

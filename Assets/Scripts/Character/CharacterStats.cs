@@ -82,6 +82,7 @@ public class CharacterStats : MonoBehaviour
         movementSpeedScaler = speedScaleBaby;
         maxLifespan = lifespan;
         EventsManager.instance.FoodAddedByNodeEvent += FoodNode;
+        EventsManager.instance.HappinessAddedByPatEvent += HappinessNode;
         EventsManager.instance.HappinessAddedByNodeEvent += HappinessNode;
         EventsManager.instance.ResourcesChangedByNodeEvent += ResourcesNode;
         EventsManager.instance.WorkRateChangedByTrainNodeEvent += TrainNode;
@@ -189,7 +190,7 @@ public class CharacterStats : MonoBehaviour
         GameManager.instance.debugStatText.text = s;
     }
 
-    float pattingRecharge = 5;
+    float pattingRecharge = 3;
     public void PatThePet()
     {
         float pattingEffectiveness = 1.0f;
@@ -202,13 +203,13 @@ public class CharacterStats : MonoBehaviour
         switch (currentLifeStage)
         {
             case CharacterLifeStage.BABY:
-                EventsManager.instance.FireAddHappinessByNodeEvent(8 * pattingEffectiveness);
+                EventsManager.instance.FireHappinessAddedByPatEvent(8 * pattingEffectiveness);
                 break;
             case CharacterLifeStage.ADULT:
-                EventsManager.instance.FireAddHappinessByNodeEvent(-3 * pattingEffectiveness);
+                EventsManager.instance.FireHappinessAddedByPatEvent(-3 * pattingEffectiveness);
                 break;
             case CharacterLifeStage.OLD_AGE:
-                EventsManager.instance.FireAddHappinessByNodeEvent(2 * pattingEffectiveness);
+                EventsManager.instance.FireHappinessAddedByPatEvent(2 * pattingEffectiveness);
                 break;
             case CharacterLifeStage.DEAD:
                 break;

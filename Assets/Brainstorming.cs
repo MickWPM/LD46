@@ -31,11 +31,17 @@ public class Brainstorming : MonoBehaviour
      *   After the first resource node is depleted, add the TRAIN node option ("Work is life though so train up to work better....")
      *   Then game on.
      * 
-     * 
+     * BUGS:
+     * None known
      * 
      *  To implement:
      * 
-     * SOUNDS!
+     * Intro screen 
+     * Music manager - dont destroy on load from intro screen
+     * UI to toggle music on/off
+     * 
+     * V1.0!!!
+     * 
      * 
      * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point
      * 

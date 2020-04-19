@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
+    //Just going to handle tutorial audio here because... well just because.
+    AudioSource audioSource;
+    public AudioClip popupAudio;
+
     private void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         StartTutorial();
     }
 
@@ -17,6 +22,7 @@ public class TutorialManager : MonoBehaviour
     {
         allTutorialUI.SetActive(true);
         tutorialIntroPopup.SetActive(true);
+        audioSource.PlayOneShot(popupAudio);
         EventsManager.instance.CharacterEggHatchedEvent += EggHatched;
     }
 
@@ -42,6 +48,7 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         EventsManager.instance.PatThePetEvent += PatDone;
         tutorialPatPopup.SetActive(true);
+        audioSource.PlayOneShot(popupAudio);
     }
 
     bool patRemoved = false;
@@ -64,6 +71,7 @@ public class TutorialManager : MonoBehaviour
         spawnedPlayNode = Instantiate(playNode, playLoc.position, Quaternion.identity);
         EventsManager.instance.PlayNodeClickedEvent += PlayDone;
         tutorialPlayPopup.SetActive(true);
+        audioSource.PlayOneShot(popupAudio);
     }
 
     void PlayDone()
@@ -86,6 +94,7 @@ public class TutorialManager : MonoBehaviour
         spawnedFoodNode = Instantiate(foodNode, foodLoc.position, Quaternion.identity);
         EventsManager.instance.FoodNodeClickedEvent += FoodDone;
         tutorialFoodPopup.SetActive(true);
+        audioSource.PlayOneShot(popupAudio);
     }
 
     void FoodDone()
@@ -109,6 +118,7 @@ public class TutorialManager : MonoBehaviour
         spawnedWorkNode = Instantiate(workNode, workLoc.position, Quaternion.identity);
         EventsManager.instance.WorkNodeClickedEvent += WorkDone;
         tutorialWorkPopup.SetActive(true);
+        audioSource.PlayOneShot(popupAudio);
     }
     
 
@@ -126,6 +136,7 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(5);
         if (spawnedWorkNode != null) Destroy(spawnedWorkNode.gameObject);
         tutorialFinishedPopup.SetActive(true);
+        audioSource.PlayOneShot(popupAudio);
     }
 
     public GameObject UItoEnable;
