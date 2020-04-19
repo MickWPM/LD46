@@ -8,18 +8,27 @@ eggTap - Egg tap
 eggCrack - Egg crack
 rawPat - Patting sound
 babyPat, adultPat, oldAgePat - Patting reaction sound (Baby, Adult, Old age) mixed with patting sound
-
-**becomeAdult, becomeOld - Life stage change sound (baby->adult, adult->old age)
-**die - Death sound
+*becomeAdult
+*becomeOld - Life stage change sound (baby->adult, adult->old age)
+*die - Death sound
+*hungryTummy - Food below zero
+*sadCry - Happiness below zero
 
 NODES:
 *clickableClicked - Node clicked sound (button 'boop')
 *playingNodeAction - Playing sound (bouncing the ball)
 *eatingNodeAction - Eating food sound
 *workingNodeAction - Working sound (keyboard)
-**trainingNodeAction - training sound (weights)
-**spawnBallSound, spawnFoodSound, spawnWorkSound, spawnTrainSound - Nodes spawned (Ball bounce, Grubs up!, Computer power up, weight thud)
+*trainingNodeAction - training sound (weights)
 
+MUSIC:
+*music01-intro : Intro and first part of loop for music track
+*music01-mainLoop : Loopable main track
 
-Baby hatched coo?
-Spawn button hover??
+--- POSSIBLE ---
+**Background sound
+**Character moving
+**SPECIFIC SPAWN SOUNDS?: spawnBallSound, spawnFoodSound, spawnWorkSound, spawnTrainSound - Nodes spawned (Ball bounce, Grubs up!, Computer power up, weight thud)
+**Coins for money related?
+**Baby hatched coo   (eh?)
+**Spawn button hover (probably not)
