@@ -1175,6 +1175,16 @@
        y1="-4808.7539"
        x2="-12753.607"
        y2="-4814.2026" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4554"
+       id="linearGradient2539"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(99.880208,0.79375)"
+       x1="41.010414"
+       y1="112.7177"
+       x2="61.383335"
+       y2="45.116669" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1183,11 +1193,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="-2484.3416"
-     inkscape:cy="2908.8311"
+     inkscape:zoom="0.088388348"
+     inkscape:cx="-18330.626"
+     inkscape:cy="7294.2502"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g2169"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -1202,7 +1212,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2501,43 +2511,43 @@
          sodipodi:type="inkscape:box3dside"
          id="path1367"
          inkscape:box3dsidetype="6"
-         d="m 17.131771,33.805725 v 20.732407 l 7.55876,3.682489 V 38.300745 Z"
-         points="17.131771,54.538132 24.690531,58.220621 24.690531,38.300745 17.131771,33.805725 "
+         d="M 17.131771,33.805734 V 54.53814 l 7.55876,3.68249 V 38.300753 Z"
+         points="17.131771,54.53814 24.690531,58.22063 24.690531,38.300753 17.131771,33.805734 "
          style="fill:#353564;fill-rule:evenodd;stroke:none;stroke-linejoin:round" />
       <path
          sodipodi:type="inkscape:box3dside"
          id="path1377"
          inkscape:box3dsidetype="11"
-         d="M 24.690531,38.300745 33.891125,-2.7635213 V 24.579228 l -9.200594,33.641393 z"
-         points="33.891125,-2.7635213 33.891125,24.579228 24.690531,58.220621 24.690531,38.300745 "
+         d="M 24.690531,38.300753 33.891125,-2.7635129 V 24.579237 L 24.690531,58.22063 Z"
+         points="33.891125,-2.7635129 33.891125,24.579237 24.690531,58.22063 24.690531,38.300753 "
          style="fill:#e9e9ff;fill-rule:evenodd;stroke:none;stroke-linejoin:round" />
       <path
          sodipodi:type="inkscape:box3dside"
          id="path1369"
          inkscape:box3dsidetype="5"
-         d="m 17.131771,33.805725 6.746875,-45.16917 10.012479,8.5999237 -9.200594,41.0642663 z"
-         points="23.878646,-11.363445 33.891125,-2.7635213 24.690531,38.300745 17.131771,33.805725 "
+         d="m 17.131771,33.805734 6.746875,-45.16917 10.012479,8.5999231 -9.200594,41.0642659 z"
+         points="23.878646,-11.363436 33.891125,-2.7635129 24.690531,38.300753 17.131771,33.805734 "
          style="fill:#4d4d9f;fill-rule:evenodd;stroke:none;stroke-linejoin:round" />
       <path
          sodipodi:type="inkscape:box3dside"
          id="path1375"
          inkscape:box3dsidetype="13"
-         d="m 17.131771,54.538132 6.746875,-37.004285 10.012479,7.045381 -9.200594,33.641393 z"
-         points="23.878646,17.533847 33.891125,24.579228 24.690531,58.220621 17.131771,54.538132 "
+         d="M 17.131771,54.53814 23.878646,17.533856 33.891125,24.579237 24.690531,58.22063 Z"
+         points="23.878646,17.533856 33.891125,24.579237 24.690531,58.22063 17.131771,54.53814 "
          style="fill:#afafde;fill-rule:evenodd;stroke:none;stroke-linejoin:round" />
       <path
          sodipodi:type="inkscape:box3dside"
          id="path1373"
          inkscape:box3dsidetype="14"
-         d="m 23.878646,-11.363445 v 28.897292 l 10.012479,7.045381 V -2.7635213 Z"
-         points="23.878646,17.533847 33.891125,24.579228 33.891125,-2.7635213 23.878646,-11.363445 "
+         d="m 23.878646,-11.363436 v 28.897292 l 10.012479,7.045381 V -2.7635129 Z"
+         points="23.878646,17.533856 33.891125,24.579237 33.891125,-2.7635129 23.878646,-11.363436 "
          style="fill:#d7d7ff;fill-rule:evenodd;stroke:none;stroke-linejoin:round" />
       <path
          sodipodi:type="inkscape:box3dside"
          id="path1371"
          inkscape:box3dsidetype="3"
-         d="m 17.131771,33.805725 6.746875,-45.16917 v 28.897292 l -6.746875,37.004285 z"
-         points="23.878646,-11.363445 23.878646,17.533847 17.131771,54.538132 17.131771,33.805725 "
+         d="m 17.131771,33.805734 6.746875,-45.16917 V 17.533856 L 17.131771,54.53814 Z"
+         points="23.878646,-11.363436 23.878646,17.533856 17.131771,54.53814 17.131771,33.805734 "
          style="fill:#8686bf;fill-rule:evenodd;stroke:none;stroke-linejoin:round" />
     </g>
     <g
@@ -3968,89 +3978,92 @@
     <g
        id="g2169"
        transform="translate(-909.99929,-38.914443)">
-      <rect
-         ry="0.021417379"
-         y="-1898.0813"
-         x="-5583.5127"
-         height="906.12903"
-         width="1555.8438"
-         id="rect1416"
-         style="opacity:1;fill:#1f2429;fill-opacity:1;stroke:#040404;stroke-width:4.56757545;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <g
-         transform="translate(61.321024,-17.296496)"
-         id="g2073">
+         id="g1501">
+        <rect
+           style="opacity:1;fill:#1f2429;fill-opacity:1;stroke:#040404;stroke-width:4.56757545;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1416"
+           width="1555.8438"
+           height="906.12903"
+           x="-5583.5127"
+           y="-1898.0813"
+           ry="0.021417379" />
+        <g
+           id="g2073"
+           transform="translate(61.321024,-17.296496)">
+          <flowRoot
+             xml:space="preserve"
+             id="flowRoot1406"
+             style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ee5533;fill-opacity:1;stroke:none"
+             transform="matrix(0.52388907,0,0,0.73267715,1680.1646,1813.9245)"><flowRegion
+               id="flowRegion1408"
+               style="fill:#ee5533;fill-opacity:1"><rect
+                 id="rect1410"
+                 width="2138.2903"
+                 height="678.82263"
+                 x="-13904.548"
+                 y="-4964.2554"
+                 style="fill:#ee5533;fill-opacity:1" /></flowRegion><flowPara
+               id="flowPara1414"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:266.66665649px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ee5533;fill-opacity:1">Ludum</flowPara></flowRoot>          <flowRoot
+             transform="matrix(0.52388907,0,0,0.73267715,2039.9983,1813.9244)"
+             style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f79122;fill-opacity:1;stroke:none"
+             id="flowRoot2034"
+             xml:space="preserve"><flowRegion
+               style="fill:#f79122;fill-opacity:1"
+               id="flowRegion2028"><rect
+                 style="fill:#f79122;fill-opacity:1"
+                 y="-4964.2554"
+                 x="-13904.548"
+                 height="678.82263"
+                 width="2138.2903"
+                 id="rect2026" /></flowRegion><flowPara
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:266.66665649px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#f79122;fill-opacity:1"
+               id="flowPara2032">Dare</flowPara></flowRoot>          <flowRoot
+             xml:space="preserve"
+             id="flowRoot2045"
+             style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient2059);fill-opacity:1;stroke:none"
+             transform="matrix(2.3222409,0,0,1.9228887,24933.746,7810.51)"><flowRegion
+               id="flowRegion2039"
+               style="fill:url(#linearGradient2077);fill-opacity:1"><rect
+                 id="rect2037"
+                 width="2138.2903"
+                 height="678.82263"
+                 x="-13904.548"
+                 y="-4964.2554"
+                 style="fill:url(#linearGradient2075);fill-opacity:1" /></flowRegion><flowPara
+               id="flowPara2043"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:266.66665649px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:url(#linearGradient2079);fill-opacity:1">46</flowPara></flowRoot>        </g>
         <flowRoot
-           transform="matrix(0.52388907,0,0,0.73267715,1680.1646,1813.9245)"
+           xml:space="preserve"
+           id="flowRoot2087"
            style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ee5533;fill-opacity:1;stroke:none"
-           id="flowRoot1406"
+           transform="matrix(4.5448801,0,0,4.8385915,54090.349,22776.511)"><flowRegion
+             id="flowRegion2083"
+             style="fill:#ee5533;fill-opacity:1"><rect
+               id="rect2081"
+               width="2138.2903"
+               height="678.82263"
+               x="-13904.548"
+               y="-4964.2554"
+               style="fill:#ee5533;fill-opacity:1" /></flowRegion><flowPara
+             id="flowPara2085"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.02481842px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ee5433;fill-opacity:1">18-20 April 2020</flowPara></flowRoot>        <flowRoot
+           transform="matrix(4.5448801,0,0,4.8385915,54091.846,22721.881)"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ee5533;fill-opacity:1;stroke:none"
+           id="flowRoot2137"
            xml:space="preserve"><flowRegion
              style="fill:#ee5533;fill-opacity:1"
-             id="flowRegion1408"><rect
+             id="flowRegion2133"><rect
                style="fill:#ee5533;fill-opacity:1"
                y="-4964.2554"
                x="-13904.548"
                height="678.82263"
                width="2138.2903"
-               id="rect1410" /></flowRegion><flowPara
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:266.66665649px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ee5533;fill-opacity:1"
-             id="flowPara1414">Ludum</flowPara></flowRoot>        <flowRoot
-           xml:space="preserve"
-           id="flowRoot2034"
-           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f79122;fill-opacity:1;stroke:none"
-           transform="matrix(0.52388907,0,0,0.73267715,2039.9983,1813.9244)"><flowRegion
-             id="flowRegion2028"
-             style="fill:#f79122;fill-opacity:1"><rect
-               id="rect2026"
-               width="2138.2903"
-               height="678.82263"
-               x="-13904.548"
-               y="-4964.2554"
-               style="fill:#f79122;fill-opacity:1" /></flowRegion><flowPara
-             id="flowPara2032"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:266.66665649px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#f79122;fill-opacity:1">Dare</flowPara></flowRoot>        <flowRoot
-           transform="matrix(2.3222409,0,0,1.9228887,24933.746,7810.51)"
-           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient2059);fill-opacity:1;stroke:none"
-           id="flowRoot2045"
-           xml:space="preserve"><flowRegion
-             style="fill:url(#linearGradient2077);fill-opacity:1"
-             id="flowRegion2039"><rect
-               style="fill:url(#linearGradient2075);fill-opacity:1"
-               y="-4964.2554"
-               x="-13904.548"
-               height="678.82263"
-               width="2138.2903"
-               id="rect2037" /></flowRegion><flowPara
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:266.66665649px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:url(#linearGradient2079);fill-opacity:1"
-             id="flowPara2043">46</flowPara></flowRoot>      </g>
-      <flowRoot
-         transform="matrix(4.5448801,0,0,4.8385915,54090.349,22776.511)"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ee5533;fill-opacity:1;stroke:none"
-         id="flowRoot2087"
-         xml:space="preserve"><flowRegion
-           style="fill:#ee5533;fill-opacity:1"
-           id="flowRegion2083"><rect
-             style="fill:#ee5533;fill-opacity:1"
-             y="-4964.2554"
-             x="-13904.548"
-             height="678.82263"
-             width="2138.2903"
-             id="rect2081" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.02481842px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ee5433;fill-opacity:1"
-           id="flowPara2085">8-20 April 2020</flowPara></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot2137"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ee5533;fill-opacity:1;stroke:none"
-         transform="matrix(4.5448801,0,0,4.8385915,54091.846,22721.881)"><flowRegion
-           id="flowRegion2133"
-           style="fill:#ee5533;fill-opacity:1"><rect
-             id="rect2131"
-             width="2138.2903"
-             height="678.82263"
-             x="-13904.548"
-             y="-4964.2554"
-             style="fill:#ee5533;fill-opacity:1" /></flowRegion><flowPara
-           id="flowPara2135"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.02481842px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ee5433;fill-opacity:1">Compo</flowPara></flowRoot>    </g>
+               id="rect2131" /></flowRegion><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.02481842px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ee5433;fill-opacity:1"
+             id="flowPara2135">Compo</flowPara></flowRoot>      </g>
+    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot2139"
@@ -4062,9 +4075,12 @@
            height="1674.4288"
            x="-19244.617"
            y="-4500.3936" /></flowRegion><flowPara
-         id="flowPara2145"></flowPara></flowRoot>    <g
+         id="flowPara2145" /></flowRoot>    <g
        id="g2504"
-       transform="translate(11.22532,98.034463)">
+       transform="translate(11.22532,98.034463)"
+       inkscape:export-filename="D:\GameDev\LD46\Assets\Art\AudioOn.png"
+       inkscape:export-xdpi="31.25329"
+       inkscape:export-ydpi="31.25329">
       <ellipse
          ry="65.481033"
          rx="64.545593"
@@ -4105,7 +4121,10 @@
     </g>
     <g
        id="g2529"
-       transform="translate(-208.0426,-52.384827)">
+       transform="translate(-208.0426,-52.384827)"
+       inkscape:export-filename="D:\GameDev\LD46\Assets\Art\audioOff.png"
+       inkscape:export-xdpi="31.25329"
+       inkscape:export-ydpi="31.25329">
       <g
          transform="translate(15.345833,152.92917)"
          id="g2519">
@@ -4153,6 +4172,117 @@
          id="path2173"
          d="m -513.39633,-339.15011 82.31901,-101.40205"
          style="fill:none;stroke:#f00000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2668"
+       inkscape:export-filename="D:\GameDev\LD46\Assets\Art\icon.png"
+       inkscape:export-xdpi="56.605392"
+       inkscape:export-ydpi="56.605392">
+      <g
+         style="opacity:0.77399998"
+         transform="translate(-47.228125,33.734375)"
+         id="g2651">
+        <rect
+           style="opacity:1;fill:#392d05;fill-opacity:1;stroke:#1d529a;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect2647"
+           width="57.436222"
+           height="56.126602"
+           x="-520.67853"
+           y="-283.81635"
+           ry="13.116028" />
+        <rect
+           ry="13.116028"
+           y="-285.40387"
+           x="-522.26605"
+           height="56.126602"
+           width="57.436222"
+           id="rect2645"
+           style="opacity:1;fill:#584608;fill-opacity:1;stroke:#1d529a;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+      <g
+         id="g2537"
+         inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\Egg\eggCrack2.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         transform="translate(-685.84471,-322.5481)">
+        <path
+           sodipodi:nodetypes="sssss"
+           inkscape:connector-curvature="0"
+           id="path2531"
+           d="m 160.46979,106.16927 c 0,10.26531 -7.40362,18.58698 -16.53646,18.58698 -9.13283,0 -16.53646,-8.32168 -16.53646,-18.58698 0,-10.265305 7.53592,-26.524479 16.66875,-26.52448 9.13284,0 16.40417,16.259175 16.40417,26.52448 z"
+           style="opacity:1;fill:url(#linearGradient2539);fill-opacity:1;stroke:none;stroke-width:0.26458332" />
+        <path
+           style="opacity:0.56099997;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 154.78125,87.714581 -6.15156,2.248958 3.96875,1.5875 -6.87917,4.960938"
+           id="path2533"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path2535"
+           d="m 129.84427,94.527602 7.14375,4.233333 -3.70417,1.058333 8.33438,2.116662 4.36562,6.4823"
+           style="opacity:0.43900003;fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+      <g
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\babyDummy.png"
+         id="g2547"
+         transform="matrix(1.0964401,0,0,0.7516023,-626.60047,-325.7626)">
+        <ellipse
+           ry="5.6885414"
+           rx="8.4666662"
+           cy="141.82188"
+           cx="77.787498"
+           id="ellipse2541"
+           style="opacity:0.98000004;fill:#1f1fbf;fill-opacity:1;stroke:#15152e;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <ellipse
+           style="opacity:0.98000004;fill:#000000;fill-opacity:1;stroke:#4543ff;stroke-width:0.14393535;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
+           id="ellipse2543"
+           cx="77.974586"
+           cy="142.52348"
+           rx="4.2241592"
+           ry="3.3636932" />
+        <path
+           sodipodi:nodetypes="csssccc"
+           inkscape:connector-curvature="0"
+           id="path2545"
+           d="m 78.627592,142.89388 c 2.523634,0.57851 4.948214,2.04617 4.471484,3.86254 -0.47673,1.81637 -2.78452,3.17981 -5.474259,3.23421 -2.689749,0.0544 -4.985685,-1.21594 -5.446169,-3.01335 -0.460486,-1.79741 2.149671,-3.32574 4.678958,-4.00644 -2.544341,3.2091 -4.312779,5.41666 0.784219,5.68119 3.082581,-0.24598 4.376141,-0.83313 0.985767,-5.75815 z"
+           style="opacity:0.98000004;fill:#ff0000;fill-opacity:1;stroke:#020101;stroke-width:0.19443148;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.7474747" />
+      </g>
+      <g
+         id="g2555"
+         inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\babyHair.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         transform="translate(-780.00759,-264.50542)">
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path2549"
+           d="m 235.87915,24.32629 c -3.3676,-6.454554 -4.67722,-3.46114 -4.67722,-3.46114"
+           style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\babyDecorations.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#000000;stroke-width:0.30338061px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 243.17185,24.75103 c -4.2128,-6.783704 -2.48241,-9.146164 -2.48241,-9.146164"
+           id="path2551"
+           inkscape:connector-curvature="0"
+           inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\babyDecorations.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+        <path
+           sodipodi:nodetypes="ccc"
+           inkscape:connector-curvature="0"
+           id="path2553"
+           d="m 238.55921,24.51248 c -3.97113,-5.680694 -2.2846,-8.986774 0.74478,-6.751794 0.7471,0.30783 -0.11517,3.457374 -1.69994,1.18234"
+           style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\babyDecorations.png"
+           inkscape:export-xdpi="96"
+           inkscape:export-ydpi="96" />
+      </g>
     </g>
   </g>
 </svg>
