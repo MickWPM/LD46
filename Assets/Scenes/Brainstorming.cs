@@ -34,13 +34,13 @@ public class Brainstorming : MonoBehaviour
      * 
      * 
      *  To implement:
-     * 
      * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point
      * Also use range of screen only in "game area"
      * 
      * SOUNDS!
      * 
      * Work credits - piggy bank image?
+     * Stone engraved font??
      * 
      *  *Build UI mechanics (middle cancel, raidal options) for right click
      *  Tooltips (nodes, me etc?) **
