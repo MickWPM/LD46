@@ -9,16 +9,19 @@ Game design:
 Tamagotchi inspired however the little pet needs to work to give you resources to interact
 Keep it alive as long as possible while juggling hunger, happiness etc through various age stages.
 
-Basic mechanics implemented:
-![Basic mechanics implemented](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/InitialMechanics.gif)
+Initial mechanics implementation:
+![Basic mechanics implemented](https://github.com/MickWPM/LD46/blob/master/SupportingFiles/Promo/InitialMechanics.gif)
 
-Initial (skippable) tutorial
-![End of the tutorial](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/V0-1%20tutorial.png)
+Initial (skippable) tutorial 
+![End of the tutorial](https://github.com/MickWPM/LD46/blob/master/SupportingFiles/Promo/V0-1%20tutorial.png)
 
 
-First full gameplay with art (initial pass at least) "V0-3"
+"V1.0"
 Tutorial:
-![Tutorial intro](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/Intro.png)
+![Tutorial](https://github.com/MickWPM/LD46/blob/master/SupportingFiles/Promo/V1-0%20tutorial.png)
 
 Gameplay:
-![Gameplay](https://github.com/MickWPM/LD46/blob/master/SupprtingFiles/Promo/V0-3%20gameplay.png)
+![Gameplay](https://github.com/MickWPM/LD46/blob/master/SupportingFiles/Promo/V1-0%20gameplay.png)
+
+Death:
+![Death](https://github.com/MickWPM/LD46/blob/master/SupportingFiles/Promo/V1-0%20gameOver.png)
