@@ -16,7 +16,6 @@ public class SpawningManager : MonoBehaviour
     Vector2 GetTopRightGameAreaWorldSpace(float xOffset = 0, float yOffset = 0)
     {
         Vector2 topLeft = new Vector2(-gameArea.sizeDelta.x + xOffset, Screen.height + gameArea.sizeDelta.y - yOffset);
-        Debug.Log($"Topleft = {topLeft}");
         return Camera.main.ScreenToWorldPoint(topLeft);
     }
 

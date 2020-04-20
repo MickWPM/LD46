@@ -27,6 +27,14 @@ public class CharacterGraphicsManager : MonoBehaviour
         EventsManager.instance.ChangeHungerStateEvent += OnChangeHunger;
         EventsManager.instance.CharacterLifeStageChangedEvent += OnLifeStageChanged;
 
+        EventsManager.instance.MidwayThroughAdulthoodEvent += MidLifeEvent;
+    }
+
+    void MidLifeEvent()
+    {
+        HideLifeGraphics();
+        matureAdultGraphics.SetActive(true);
+        EventsManager.instance.MidwayThroughAdulthoodEvent -= MidLifeEvent;
     }
 
     private void OnLifeStageChanged(CharacterLifeStage lifeStage)

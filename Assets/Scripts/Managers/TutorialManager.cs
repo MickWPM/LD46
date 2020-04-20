@@ -155,10 +155,8 @@ public class TutorialManager : MonoBehaviour
         EventsManager.instance.FireEndTutorialEvent();
 
         //SET INITIAL CONDITIONS
-        //UI update etc
-        //All can probably be done by responding to the event??
-        timtam.SetInitStats(100, 100);
         Instantiate(workNode, liveWorkLoc.position, Quaternion.identity);
+        timtam.SetInitStats(100, 100);
 
         UItoEnable.SetActive(true);
     }

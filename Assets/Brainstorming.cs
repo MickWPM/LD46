@@ -34,7 +34,10 @@ public class Brainstorming : MonoBehaviour
      * BUGS:
      * None known
      * 
-     * V1.0!!!
+     * TODO: V1.1
+     * 
+     * Dont play new node action sound if we clicked on the same node?
+     * 
      * 
      * 
      * Spawning manager use Physics2D.OverlapCollider to find a CLEAN spawn point

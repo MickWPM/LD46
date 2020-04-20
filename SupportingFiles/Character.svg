@@ -22,6 +22,86 @@
    inkscape:export-ydpi="96">
   <defs
      id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4915">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.72222221"
+         offset="0"
+         id="stop4911" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.13131313"
+         offset="1"
+         id="stop4913" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4903"
+       inkscape:collect="always">
+      <stop
+         id="stop4899"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:0.98989898" />
+      <stop
+         id="stop4901"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0.13131313" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker3403"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path3401"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path2134"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#3023b8;stroke-width:1pt;stroke-opacity:1;fill:#3023b8;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path2140"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#740000;stroke-width:1pt;stroke-opacity:1;fill:#740000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2131"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#3023b8;stroke-width:1pt;stroke-opacity:1;fill:#392d05;fill-opacity:0"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
     <marker
        inkscape:stockid="DotM"
        orient="auto"
@@ -1185,6 +1265,61 @@
        y1="112.7177"
        x2="61.383335"
        y2="45.116669" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4903"
+       id="radialGradient4895"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.46690712,-219.11716,151.19817)"
+       cx="-177.95654"
+       cy="84.607597"
+       fx="-177.95654"
+       fy="84.607597"
+       r="8.5982621" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient997"
+       id="linearGradient4897"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-161.95003,85.701793)"
+       x1="-239.74629"
+       y1="114.77564"
+       x2="-235.50566"
+       y2="104.53254" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4915"
+       id="radialGradient4907"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.46690712,-219.11716,151.19817)"
+       cx="-177.95654"
+       cy="84.607597"
+       fx="-177.95654"
+       fy="84.607597"
+       r="8.5982621" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient997"
+       id="linearGradient4909"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-161.95003,85.701793)"
+       x1="-239.74629"
+       y1="114.77564"
+       x2="-235.50566"
+       y2="104.53254" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5053"
+       x="-0.14774672"
+       width="1.2954934"
+       y="-0.32219466"
+       height="1.6443893">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.0423238"
+         id="feGaussianBlur5055" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1193,11 +1328,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.088388348"
-     inkscape:cx="-18330.626"
-     inkscape:cy="7294.2502"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="-1809.4878"
+     inkscape:cy="825.20898"
      inkscape:document-units="mm"
-     inkscape:current-layer="g2169"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -1212,7 +1347,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4283,6 +4418,103 @@
            inkscape:export-xdpi="96"
            inkscape:export-ydpi="96" />
       </g>
+    </g>
+    <g
+       id="g4891"
+       inkscape:export-filename="D:\GameDev\LD46\Assets\Art\UI\restart.png"
+       inkscape:export-xdpi="21"
+       inkscape:export-ydpi="21">
+      <ellipse
+         style="opacity:1;fill:#f2d360;fill-opacity:1;stroke:#130f4c;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="ellipse4307"
+         cx="-490.34805"
+         cy="-680.19281"
+         rx="100.79351"
+         ry="92.468536" />
+      <g
+         inkscape:export-ydpi="25.190035"
+         inkscape:export-xdpi="25.190035"
+         inkscape:export-filename="D:\GameDev\LD46\Assets\Art\UI\restart.png"
+         transform="matrix(1.1994765,0,0,1.1159279,65.802279,19.09009)"
+         id="g3395">
+        <path
+           style="opacity:1;fill:#392d05;fill-opacity:0;stroke:#3123b9;stroke-width:8;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
+           id="path2129"
+           sodipodi:type="arc"
+           sodipodi:cx="-464.34375"
+           sodipodi:cy="-621.36871"
+           sodipodi:rx="67.46875"
+           sodipodi:ry="64.293747"
+           sodipodi:start="0"
+           sodipodi:end="5.1977646"
+           d="m -396.875,-621.36871 a 67.46875,64.293747 0 0 1 -49.38461,61.94114 67.46875,64.293747 0 0 1 -75.85844,-28.73607 67.46875,64.293747 0 0 1 8.71883,-77.34583 67.46875,64.293747 0 0 1 80.53238,-12.72705"
+           sodipodi:open="true" />
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:#3023b8;fill-opacity:1;stroke:#3023b8;stroke-width:3.69489264;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+           d="m -442.2408,-681.94677 36.98529,27.24817"
+           id="path2597"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       id="g4885"
+       inkscape:export-filename="D:\GameDev\LD46\Assets\Art\UI\quit.png"
+       inkscape:export-xdpi="20.9"
+       inkscape:export-ydpi="20.9">
+      <ellipse
+         ry="92.468536"
+         rx="100.79351"
+         cy="-632.0387"
+         cx="-803.61475"
+         id="ellipse4327"
+         style="opacity:1;fill:#f2d360;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="D:\GameDev\LD46\Assets\Art\UI\quit.png"
+         id="g4305">
+        <path
+           style="fill:none;stroke:#fa0000;stroke-width:10;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m -805.97797,-589.80027 1.12252,-114.49828 35.18254,23.13398 -2.38125,117.73958"
+           id="path3397"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#740000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+           d="m -882.64998,-630.36457 85.72499,1.5875"
+           id="path3399"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+    </g>
+    <g
+       id="g5059"
+       transform="translate(157.15448,59.120019)"
+       inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\characterShadow.png"
+       inkscape:export-xdpi="60.373405"
+       inkscape:export-ydpi="60.373405">
+      <ellipse
+         transform="matrix(8.1049789,0,0,4.1043132,2820.8034,-597.1583)"
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\oldAgeCateract.png"
+         style="opacity:1;fill:url(#radialGradient4895);fill-opacity:1;stroke:url(#linearGradient4897);stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter1071)"
+         id="ellipse4893"
+         cx="-397.0737"
+         cy="190.70206"
+         rx="8.4657621"
+         ry="3.8820899" />
+      <ellipse
+         ry="3.8820899"
+         rx="8.4657621"
+         cy="190.70206"
+         cx="-397.0737"
+         id="ellipse4905"
+         style="opacity:1;fill:url(#radialGradient4907);fill-opacity:1;stroke:url(#linearGradient4909);stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5053)"
+         inkscape:export-filename="D:\GameDev\LD46\Assets\Art\Character\oldAgeCateract.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         transform="matrix(6.9013762,0,0,2.8453903,2273.0343,-355.6239)" />
     </g>
   </g>
 </svg>

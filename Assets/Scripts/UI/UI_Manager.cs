@@ -32,6 +32,9 @@ public class UI_Manager : MonoBehaviour
         EventsManager.instance.CharacterStatChangedEvent += OnStatUpdate;
         EventsManager.instance.MouseHoverObjectUpdatedEvent += OnMouseHoverObjectChange;
         EventsManager.instance.EndTutorialEvent += () => { OnResourcesUpdated(0); };
+        EventsManager.instance.NodeSpawnedEvent += CheckFailStateNodePlaced;
+        EventsManager.instance.ResourceNodeExhaustedEvent += CheckFailStateWorkNodeExpired;
+        EventsManager.instance.CharacterStatChangedEvent += CheckFailStateStatChanged;
 
         musicManager = GameObject.FindObjectOfType<MusicManager>();
         if (musicManager == null)
@@ -45,6 +48,7 @@ public class UI_Manager : MonoBehaviour
         buyWorkButton.interactable = false;
         buyTrainingButton.interactable = false;
         musicToggleImage.sprite = musicManager.IsMusicOn() ? musicOnSprite : musicOffSprite;
+        failStateGameObject.SetActive(false);
     }
 
     private void Update()
@@ -57,6 +61,53 @@ public class UI_Manager : MonoBehaviour
     {
         bool musicOn = musicManager.ToggleMusicNowOn();
         musicToggleImage.sprite = musicOn ? musicOnSprite : musicOffSprite;
+    }
+
+
+
+    private void CheckFailStateStatChanged(CharacterStatType stat, float value)
+    {
+        if (stat != CharacterStatType.RESOURCES)
+            return;
+
+        CheckFailState();
+    }
+
+
+    void CheckFailStateWorkNodeExpired(Vector3 loc)
+    {
+        CheckFailState();
+    }
+
+    void CheckFailStateNodePlaced(Nodes node)
+    {
+        //If we just replaced a node, we are fine
+        if (node == Nodes.WORK)
+            return;
+        CheckFailState();
+    }
+
+    public GameObject failStateGameObject;
+    void CheckFailState()
+    {
+        ResourceNode[] workNodes = GameObject.FindObjectsOfType<ResourceNode>();
+        if (workNodes.Length > 0)
+        {
+            for (int i = 0; i < workNodes.Length; i++)
+            {
+                ResourceNode thisNode = workNodes[i];
+                if (thisNode.GetPercentRemaining() > 0)
+                    return;
+            }
+
+        }
+            
+        if (GameManager.instance.CanAfford(Nodes.WORK))
+            return;
+
+        //At this point - we cant afford any more work nodes and none are left!
+        Debug.Log("FAIL CONDITION");
+        failStateGameObject.SetActive(true);
     }
 
     void UpdateClickablePopup()
@@ -143,6 +194,8 @@ public class UI_Manager : MonoBehaviour
     {
         string s = $"Well.............. Remind me NOT to let you look after my pet.\n\n\n\nYou managed to keep this poor little creature alive for {lifetime} days until it died of old age.";
         gameOverText.text = s;
+
+        failStateGameObject.SetActive(false);
         gameOverScreen.SetActive(true);
     }
 
@@ -150,5 +203,10 @@ public class UI_Manager : MonoBehaviour
     {
         gameOverScreen.SetActive(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitButtonPressed()
+    {
+        Application.Quit();
     }
 }

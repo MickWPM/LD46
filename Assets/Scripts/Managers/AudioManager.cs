@@ -125,6 +125,9 @@ public class AudioManager : MonoBehaviour
 
     void OnNodeClicked()
     {
+        //Should we check if this is the same node?
+        nodeActionCooldownRemaining = 0;
+
         audioSource.PlayOneShot(clickableClicked);
     }
 

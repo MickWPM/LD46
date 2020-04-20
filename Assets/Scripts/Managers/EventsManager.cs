@@ -83,10 +83,15 @@ public class EventsManager : MonoBehaviour
 
 
     public event System.Action<CharacterLifeStage> CharacterLifeStageChangedEvent;
-
     internal void FireChangedLifeStageEvent(CharacterLifeStage currentLifeStage)
     {
         CharacterLifeStageChangedEvent?.Invoke(currentLifeStage);
+    }
+
+    public event System.Action MidwayThroughAdulthoodEvent;
+    internal void FireMidwayThroughAdulthoodEvent()
+    {
+        MidwayThroughAdulthoodEvent?.Invoke();
     }
 
     #endregion

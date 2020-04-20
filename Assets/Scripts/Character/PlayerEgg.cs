@@ -15,7 +15,6 @@ public class PlayerEgg : MonoBehaviour
     void EggClicked()
     {
         ++cracks;
-        Debug.Log("Crakcing sound");
         if (cracks > crackSprites.Length)
         {
             Hatch();

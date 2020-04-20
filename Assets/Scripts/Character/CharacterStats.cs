@@ -127,7 +127,6 @@ public class CharacterStats : MonoBehaviour
         AddHappiness(Time.deltaTime * -happinessRemovedPerTrainSecond);
     }
 
-
     void UpdateStates()
     {
         CharacterHungerState newHungerState = CharacterHungerState.NORMAL;
@@ -164,6 +163,7 @@ public class CharacterStats : MonoBehaviour
             currentHungerState = newHungerState;
         }
     }
+
 
     private void Update()
     {
@@ -270,6 +270,7 @@ public class CharacterStats : MonoBehaviour
         return GetHappinessLifespanLossModifier() * GetHungerLifespanLossModifier() * lifespanLossRate;
     }
 
+    bool midLifeFired = false;
     void UpdateLifespan()
     {
         currentAge += Time.deltaTime;
@@ -282,7 +283,6 @@ public class CharacterStats : MonoBehaviour
             return;
         }
 
-        //Is there a better place for this?
         if (LifespanRelativeAge() > babyRelativeAge)
         {
             if(LifespanRelativeAge() > OldAgeRelativeAge)
@@ -291,6 +291,15 @@ public class CharacterStats : MonoBehaviour
             } else
             {
                 SetLifeStage(CharacterLifeStage.ADULT);
+                if (!midLifeFired)
+                {
+                    float midlife = babyRelativeAge + ((OldAgeRelativeAge - babyRelativeAge) / 2);
+                    if(LifespanRelativeAge() > midlife)
+                    {
+                        midLifeFired = true;
+                        EventsManager.instance.FireMidwayThroughAdulthoodEvent();
+                    }
+                }
             }
         } else
         {
